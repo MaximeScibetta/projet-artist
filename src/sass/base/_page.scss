@@ -3,7 +3,12 @@ html{
   font-size: $global-font-size;
   line-height: $global-line-height;
   color: $global-txt-color;
-  max-width: 960px;
+}
+
+body{
   min-height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-gray;
 }

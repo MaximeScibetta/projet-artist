@@ -1,19 +1,28 @@
 
 @import "settings/core";
 
+
 @import "tools/mixins";
+
 
 @import "generic/reset";
 @import "generic/box-sizing";
-@import "generic/shared";
 @import "generic/visuallyhidden";
+
 
 @import "base/page";
 @import "base/headings";
 @import "base/header";
+@import "base/main";
 @import "base/links";
+@import "base/footer";
 
-@import "components/mainNav";
+
+@import "components/wrap";
+@import "components/main-nav";
+@import "components/main-nav__list-item";
+@import "components/main-nav__link";
+@import "components/site-footer__link";
 
 
 

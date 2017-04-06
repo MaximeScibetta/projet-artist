@@ -9,26 +9,30 @@ html(lang="fr")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
         meta(name="description" content="Projet (The Artist) réalisé dans le cadre du cours de design web")
         meta(name="author" content= webmasterName)
-        meta(name="keywords" content= client + " , design web, HEPL, infographie")
+        meta(name="keywords" content=client + " , design web, HEPL, infographie")
         <!--[if lt IE 9]>
         script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
         <![endif]-->
 
     body
-        header
+        header.wrap
             h1(role="heading", aria-level="1"): span= client
             nav(aria-labelledby="mainMenuHeading")
                 h2.visuallyhidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
-                ul.mainNav
-                    li.mainNav__item: a(href="index.html", title="Aller vers la page d'accueil - Biographie") Accueil
-                    li.mainNav__item: a(href="galerie.html", title="Aller vers la gallerie de ses oeuvres") Galerie
-                    li.mainNav__item: a(href="bibliographie.html", title="Aller vers la page bibliographie") Bibliographie
-                    li.mainNav__item: a(href="liens.html", title="Aller vers la page des liens concernant l'artiste") Liens
-                    li.mainNav__item: a(href="pratique.html", title="Aller vers la page pratique") Pratique
+                ul.main-nav
+                    li.main-nav__list-item: a.main-nav__link(href="index.html", title="Aller vers la page d'accueil - Biographie") Accueil
+                    li.main-nav__list-item: a.main-nav__link(href="galerie.html", title="Aller vers la gallerie de ses oeuvres") Galerie
+                    li.main-nav__list-item: a.main-nav__link(href="bibliographie.html", title="Aller vers la page bibliographie") Bibliographie
+                    li.main-nav__list-item: a.main-nav__link(href="liens.html", title="Aller vers la page des liens concernant l'artiste") Liens
+                    li.main-nav__list-item: a.main-nav__link(href="pratique.html", title="Aller vers la page pratique") Pratique
 
-        main
+        main.wrap
             block content
                 span content
-        footer
-            span footer
+        footer.wrap.site-footer
+            ul
+                li: a.site-footer__link(href="mailto:" + webmasterMail, title="Envoyer un email au webmaster depuis votre boîte mail par défaut") Contact the Webmaster
+                li Designed by Eric Closquet
+
+
         script(src="assets/js/script.js")
