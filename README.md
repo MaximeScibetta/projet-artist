@@ -1,13 +1,3 @@
-# katbiznis
+# Projet *Artist*
 
-> VCard exercise
-
-* * *
-
-## Installation
-
-_TODO_
-
-## Fonctionnement
-
-_TODO_
+Ce projet est un site web fictif réalisé dans le cardre d'un cours de design web.
