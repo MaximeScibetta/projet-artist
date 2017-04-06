@@ -1,9 +1,13 @@
-//@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+
 
 $global-font-size: 14px;
 $global-line-height: 1.5;
 $system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 //$main-font: 'Montserrat';
+$main-h1-font: 'Lobster';
+$heading-font: 'Voltaire';
 
 $banner-bcg-image: './banner-bcg.jpg';
 //$main-bcg-image: './main-bcg.jpg';

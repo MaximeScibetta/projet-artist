@@ -27,8 +27,12 @@ html(lang="fr")
                     li.main-nav__list-item: a.main-nav__link(href="pratique.html", title="Aller vers la page pratique") Pratique
 
         main.wrap
+            block pageHeading
+                div page h1
+
             block content
-                span content
+                div content
+
         footer.wrap.site-footer
             ul
                 li: a.site-footer__link(href="mailto:" + webmasterMail, title="Envoyer un email au webmaster depuis votre boîte mail par défaut") Contact the Webmaster
