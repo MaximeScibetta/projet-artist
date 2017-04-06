@@ -1,0 +1,9 @@
+html{
+  font-family: $system-fonts;
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+  color: $global-txt-color;
+  max-width: 960px;
+  min-height: 100%;
+  margin: 0 auto;
+}

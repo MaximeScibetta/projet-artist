@@ -1,0 +1,10 @@
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p:not(:last-of-type), pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+  margin-bottom: 1em;
+}

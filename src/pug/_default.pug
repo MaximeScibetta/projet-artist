@@ -1,0 +1,34 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="utf-8")
+        block title
+            title XXXXXXXX
+        link(rel="stylesheet", href="assets/css/styles.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="description" content="Projet (The Artist) réalisé dans le cadre du cours de design web")
+        meta(name="author" content= webmasterName)
+        meta(name="keywords" content= client + " , design web, HEPL, infographie")
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+
+    body
+        header
+            h1(role="heading", aria-level="1"): span= client
+            nav(aria-labelledby="mainMenuHeading")
+                h2.visuallyhidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
+                ul.mainNav
+                    li.mainNav__item: a(href="index.html", title="Aller vers la page d'accueil - Biographie") Accueil
+                    li.mainNav__item: a(href="galerie.html", title="Aller vers la gallerie de ses oeuvres") Galerie
+                    li.mainNav__item: a(href="bibliographie.html", title="Aller vers la page bibliographie") Bibliographie
+                    li.mainNav__item: a(href="liens.html", title="Aller vers la page des liens concernant l'artiste") Liens
+                    li.mainNav__item: a(href="pratique.html", title="Aller vers la page pratique") Pratique
+
+        main
+            block content
+                span content
+        footer
+            span footer
+        script(src="assets/js/script.js")
