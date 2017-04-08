@@ -1,11 +1,8 @@
-extends _default
+extends _default.pug
 
-block title
-    title Accueil - Nicolas de Stael
+block page-name
+    - var pageName = 'Bibliographie'
 
-block pageHeading
-    h1.visuallyhidden(role="heading", aria-level="1") accueil - Biographie
-    div biblio
 
 block content
     div test

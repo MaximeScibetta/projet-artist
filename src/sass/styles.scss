@@ -7,13 +7,14 @@
 
 @import "generic/reset";
 @import "generic/box-sizing";
-@import "generic/visuallyhidden";
+@import "generic/_visually-hidden";
 
 
 @import "base/page";
 @import "base/headings";
 @import "base/header";
 @import "base/main";
+@import "base/paragraph";
 @import "base/links";
 @import "base/footer";
 
@@ -22,6 +23,13 @@
 @import "components/main-nav";
 @import "components/main-nav__list-item";
 @import "components/main-nav__link";
+@import "components/main-nav__link--active";
+@import "components/page-heading";
+@import "components/biography";
+@import "components/biography__figure";
+@import "components/biography__image";
+@import "components/biography__image_caption";
+@import "components/biography__text";
 @import "components/site-footer__link";
 
 

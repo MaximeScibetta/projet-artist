@@ -1,0 +1,6 @@
+.main-nav__link--active{
+  border-bottom: 3px double $menu-active-bar-bcg-color;
+}
+.main-nav__link--active:hover{
+  border-bottom: 3px double $link-hover-txt-color;
+}
