@@ -1,4 +1,4 @@
 node_modules
 assets
-index.html
+*.html
 .idea
