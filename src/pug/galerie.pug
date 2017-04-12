@@ -5,9 +5,16 @@ block page-name
 
 
 block content
-    .galerie
-        figure.galerie__figure
-            img.galerie__image(src="assets/images/nicolas.jpg", width="300", height="258")
-            figcaption.galerie__image__caption Nicolas de Staël dans son atelier, rue Gauguet, Paris 1949
+    each val, index in galerie
+        figure(class=pageName + '__figure')
+            img(src="assets/images/"+index, width=val.w, height=val.h, class=pageName + '__image')
+            figcaption(class=pageName + '__image__caption')
+                ul
+                    li(class="")= val.name
+                    li(class="")= val.date
+                    li(class="")= val.technique
+                    li(class="")= val.dimension
+                    li(class="")= val.place
 
-        .galerie__text
+
+

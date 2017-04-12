@@ -41,13 +41,14 @@ html(lang="fr")
 
         main.wrap(role="main")
             h1.page-heading(role="heading", aria-level="1")= firstLetterMaj(pageName)
-            block content
+            div(class=pageName)
+                block content
 
 
         footer.wrap.site-footer(role="contentinfo")
             ul
                 li: a.site-footer__link(href="mailto:" + webmasterMail, title="Envoyer un email au webmaster depuis votre boîte mail par défaut") Contact the Webmaster
-                li Designed by Eric Closquet
+                li= 'Designed by ' + webmasterName
 
 
         script(src="assets/js/script.js")

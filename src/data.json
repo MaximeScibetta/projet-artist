@@ -1,5 +1,160 @@
 {
   "projectName": "Nicolas de Stael",
   "webmasterName": "Eric Closquet",
-  "webmasterMail": "closquet.eric@live.be"
+  "webmasterMail": "closquet.eric@live.be",
+  "galerie": {
+    "atelier.jpg": {
+      "name": "Atelier",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "195 x 114 cm",
+      "place": "Galerie Jeanne Bucher",
+      "w": "174",
+      "h": "300"
+    },
+    "bateau.jpg": {
+      "name": "Bateau de guerre",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "65 x 81 cm",
+      "place": "Collection particulière, Lausane",
+      "w": "300",
+      "h": "240"
+    },
+    "bleu.jpg": {
+      "name": "Nature morte au chandelier sur fond bleu",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "89 x 130 cm",
+      "place": "Musée Picasso, Antibes",
+      "w": "300",
+      "h": "205"
+    },
+    "bocaux.jpg": {
+      "name": "Nature morte aux bocaux",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "65 x 81 cm",
+      "place": "Collection particulière",
+      "w": "300",
+      "h": "237"
+    },
+    "bouteilles.jpg": {
+      "name": "Bouteilles",
+      "date": "1952",
+      "technique": "Huile sur toile",
+      "dimension": "65 x 81 cm",
+      "place": "Courtesy Massimo Martino SA, Lugano",
+      "w": "300",
+      "h": "243"
+    },
+    "composition.jpg": {
+      "name": "Composition",
+      "date": "1947",
+      "technique": "Encre de chine",
+      "dimension": "105 x 76 cm",
+      "place": "Collection particulière",
+      "w": "211",
+      "h": "300"
+    },
+    "fete.jpg": {
+      "name": "Jour de fête",
+      "date": "1949",
+      "technique": "Huile sur toile",
+      "dimension": "100 x 73 cm",
+      "place": "Galerie Jeanne Bucher",
+      "w": "217",
+      "h": "300"
+    },
+    "foot.jpg": {
+      "name": "Les Footballeurs",
+      "date": "1952",
+      "technique": "Huile sur toile",
+      "dimension": "65 x 81 cm",
+      "place": "Courtesy Galerie Daniel Malingue",
+      "w": "300",
+      "h": "238"
+    },
+    "grey.jpg": {
+      "name": "Paris la nuit",
+      "date": "1954",
+      "technique": "Huile sur toile",
+      "dimension": "45 x 60 cm",
+      "place": "Collection particulière, Suisse",
+      "w": "300",
+      "h": "221"
+    },
+    "nu.jpg": {
+      "name": "Etude de nu",
+      "date": "1955",
+      "technique": "Fusain sur papier",
+      "dimension": "150 x 100 cm",
+      "place": "Fondation Marguerite et Aimé Maeght, Saint-Paul",
+      "w": "196",
+      "h": "300"
+    },
+    "nu2.jpg": {
+      "name": "Grand nu orange",
+      "date": "1953",
+      "technique": "Huile sur toile",
+      "dimension": "89 x 146 cm",
+      "place": "Collection particulière",
+      "w": "300",
+      "h": "197"
+    },
+    "red.jpg": {
+      "name": "Bouteilles rouges",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "73 x 100 cm",
+      "place": "Collection particulière, Suisse",
+      "w": "300",
+      "h": "214"
+    },
+    "ressent.jpg": {
+      "name": "Ressentiment",
+      "date": "1947",
+      "technique": "Huile sur toile",
+      "dimension": "100 x 81 cm",
+      "place": "Galerie Jeanne Bucher",
+      "w": "243",
+      "h": "300"
+    },
+    "route.jpg": {
+      "name": "La Route",
+      "date": "1954",
+      "technique": "Huile sur toile",
+      "dimension": "60 x 81 cm",
+      "place": "Collection particulière",
+      "w": "300",
+      "h": "221"
+    },
+    "route2.jpg": {
+      "name": "La Route d’Uzès",
+      "date": "1954",
+      "technique": "Huile sur toile",
+      "dimension": "60 x 81 cm",
+      "place": "Collection particulière",
+      "w": "300",
+      "h": "217"
+    },
+    "sun.jpg": {
+      "name": "Paysage",
+      "date": "1952",
+      "technique": "Huile sur carton",
+      "dimension": "33 x 46 cm",
+      "place": "Collection particulière",
+      "w": "300",
+      "h": "213"
+    },
+    "train.jpg": {
+      "name": "Chemin de fer au bord de la mer, soleil couchant",
+      "date": "1955",
+      "technique": "Huile sur toile",
+      "dimension": "73 x 100 cm",
+      "place": "Courtesy Galerie Daniel Malingue",
+      "w": "300",
+      "h": "218"
+    }
+  }
 }
