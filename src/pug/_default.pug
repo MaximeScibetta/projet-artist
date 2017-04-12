@@ -1,4 +1,4 @@
-include _mixins.pug
+include _functions.pug
 
 block page-name
     - var pageName = 'current page'
@@ -23,16 +23,24 @@ html(lang="fr")
             h1(role="heading", aria-level="1"): span= projectName
             nav(aria-labelledby="mainMenuHeading", role="navigation")
                 h2.visually-hidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
-                ul.main-nav
-                    each val, index in {index:'Biographie',galerie:'Galerie',bibliographie:'Bibliographie',liens:'Liens',pratique:'Pratique'}
-                        if (pageName == val)
-                            li.main-nav__list-item: a.main-nav__link.main-nav__link--active(href=index + '.html', title='Aller vers la page ' + val.substr(0, 1).toLowerCase() + val.substr(1))= val
+            ul.main-nav
+                each val in ['biographie', 'galerie', 'bibliographie', 'liens', 'pratique']
+                    if (pageName == val)
+                        if (val == 'biographie')
+                            li.main-nav__list-item: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                         else
-                            li.main-nav__list-item: a.main-nav__link(href=index + '.html', title='Aller vers la page ' + val.substr(0, 1).toLowerCase() + val.substr(1))= val
+                            li.main-nav__list-item: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                    else
+                        if (val == 'biographie')
+                            li.main-nav__list-item: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                        else
+                            li.main-nav__list-item: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+
+
 
 
         main.wrap(role="main")
-            h1.page-heading(role="heading", aria-level="1")= pageName
+            h1.page-heading(role="heading", aria-level="1")= firstLetterMaj(pageName)
             block content
 
 

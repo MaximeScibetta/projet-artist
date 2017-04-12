@@ -2,12 +2,12 @@
 @import "settings/core";
 
 
-@import "tools/mixins";
+@import "tools/_mixins";
 
 
 @import "generic/reset";
 @import "generic/box-sizing";
-@import "generic/_visually-hidden";
+@import "generic/visually-hidden";
 
 
 @import "base/page";

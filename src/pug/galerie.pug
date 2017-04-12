@@ -1,8 +1,13 @@
 extends _default.pug
 
 block page-name
-    - var pageName = 'Galerie'
+    - var pageName = 'galerie'
 
 
 block content
-    div test
+    .galerie
+        figure.galerie__figure
+            img.galerie__image(src="assets/images/nicolas.jpg", width="300", height="258")
+            figcaption.galerie__image__caption Nicolas de Staël dans son atelier, rue Gauguet, Paris 1949
+
+        .galerie__text
