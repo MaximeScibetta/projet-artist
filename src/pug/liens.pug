@@ -5,4 +5,7 @@ block page-name
 
 
 block content
-    div test
+    ul(class=pageName + '__links-list')
+        each val,index in {'Officiel des arts': '', 'Maulpoix': '', 'Poster shop': '', 'My climats painters': '', 'pro wanadoo': ''}
+            li(class=pageName + '__links-list__item')
+                a(href=val, class=pageName + '__links-list__link')= index

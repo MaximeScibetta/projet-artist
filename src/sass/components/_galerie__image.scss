@@ -2,3 +2,15 @@
   max-height: 195px;
   width: auto;
 }
+
+//javascript enable
+
+.js-enable .galerie__image{
+  max-height: 113px;
+  width: auto;
+}
+
+
+.js-enable .galerie__figure--on-click .galerie__image{
+  max-height: none;
+}

@@ -1,0 +1,21 @@
+.galerie__close-button{
+  display: none;
+  text-align: right;
+  color: $link-txt-color;
+  font-weight: bold;
+  padding: 10px 15px;
+
+  &:hover{
+    color: $link-hover-txt-color;
+    cursor: pointer;
+}
+}
+
+//javascript enable
+
+.js-enable .galerie__close-button--visible{
+  display: initial;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

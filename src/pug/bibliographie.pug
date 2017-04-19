@@ -5,4 +5,20 @@ block page-name
 
 
 block content
-    div test
+    each val, index in bibliographie
+        section(aria-labelledby=index + 'Heading', class=pageName + '__book')
+            h2(id=index + 'Heading', aria-level="2", class=pageName + '__book__heading')= val.name
+            figure(class=pageName + '__book__figure')
+                img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Première de couverture de l'ouvrage: " + val.name, class=pageName + '__image', class=pageName + '__book__image')
+                figcaption(class=pageName + '__image__caption')
+                    ul(class=pageName + '__book__info')
+                        li!= 'Auteur&nbsp;: ' + val.author
+                        li!= 'Éditeur&nbsp;: ' + val.editor
+                        li!= 'Caractéristiques'
+                            ul
+                                li!= 'Type&nbsp;: ' + val.characteristics.type
+                                li!= 'Nombre de pages&nbsp;: ' + val.characteristics.pages
+                                li!= 'Format&nbsp;: ' + val.characteristics.format
+                                li!= 'Reliure et couverture&nbsp;: ' + val.characteristics.cover
+                        if (val.info)
+                            li!= val.info

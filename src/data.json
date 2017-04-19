@@ -3,7 +3,7 @@
   "webmasterName": "Eric Closquet",
   "webmasterMail": "closquet.eric@live.be",
   "galerie": {
-    "atelier.jpg": {
+    "atelier": {
       "name": "Atelier",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -12,7 +12,7 @@
       "w": "174",
       "h": "300"
     },
-    "bateau.jpg": {
+    "bateau": {
       "name": "Bateau de guerre",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -21,7 +21,7 @@
       "w": "300",
       "h": "240"
     },
-    "bleu.jpg": {
+    "bleu": {
       "name": "Nature morte au chandelier sur fond bleu",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -30,7 +30,7 @@
       "w": "300",
       "h": "205"
     },
-    "bocaux.jpg": {
+    "bocaux": {
       "name": "Nature morte aux bocaux",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -39,7 +39,7 @@
       "w": "300",
       "h": "237"
     },
-    "bouteilles.jpg": {
+    "bouteilles": {
       "name": "Bouteilles",
       "date": "1952",
       "technique": "Huile sur toile",
@@ -48,7 +48,7 @@
       "w": "300",
       "h": "243"
     },
-    "composition.jpg": {
+    "composition": {
       "name": "Composition",
       "date": "1947",
       "technique": "Encre de chine",
@@ -57,7 +57,7 @@
       "w": "211",
       "h": "300"
     },
-    "fete.jpg": {
+    "fete": {
       "name": "Jour de fête",
       "date": "1949",
       "technique": "Huile sur toile",
@@ -66,7 +66,7 @@
       "w": "217",
       "h": "300"
     },
-    "foot.jpg": {
+    "foot": {
       "name": "Les Footballeurs",
       "date": "1952",
       "technique": "Huile sur toile",
@@ -75,7 +75,7 @@
       "w": "300",
       "h": "238"
     },
-    "grey.jpg": {
+    "grey": {
       "name": "Paris la nuit",
       "date": "1954",
       "technique": "Huile sur toile",
@@ -84,7 +84,7 @@
       "w": "300",
       "h": "221"
     },
-    "nu.jpg": {
+    "nu": {
       "name": "Etude de nu",
       "date": "1955",
       "technique": "Fusain sur papier",
@@ -93,7 +93,7 @@
       "w": "196",
       "h": "300"
     },
-    "nu2.jpg": {
+    "nu2": {
       "name": "Grand nu orange",
       "date": "1953",
       "technique": "Huile sur toile",
@@ -102,7 +102,7 @@
       "w": "300",
       "h": "197"
     },
-    "red.jpg": {
+    "red": {
       "name": "Bouteilles rouges",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -111,7 +111,7 @@
       "w": "300",
       "h": "214"
     },
-    "ressent.jpg": {
+    "ressent": {
       "name": "Ressentiment",
       "date": "1947",
       "technique": "Huile sur toile",
@@ -120,7 +120,7 @@
       "w": "243",
       "h": "300"
     },
-    "route.jpg": {
+    "route": {
       "name": "La Route",
       "date": "1954",
       "technique": "Huile sur toile",
@@ -129,7 +129,7 @@
       "w": "300",
       "h": "221"
     },
-    "route2.jpg": {
+    "route2": {
       "name": "La Route d’Uzès",
       "date": "1954",
       "technique": "Huile sur toile",
@@ -138,7 +138,7 @@
       "w": "300",
       "h": "217"
     },
-    "sun.jpg": {
+    "sun": {
       "name": "Paysage",
       "date": "1952",
       "technique": "Huile sur carton",
@@ -147,7 +147,7 @@
       "w": "300",
       "h": "213"
     },
-    "train.jpg": {
+    "train": {
       "name": "Chemin de fer au bord de la mer, soleil couchant",
       "date": "1955",
       "technique": "Huile sur toile",
@@ -155,6 +155,83 @@
       "place": "Courtesy Galerie Daniel Malingue",
       "w": "300",
       "h": "218"
+    }
+  },
+  "bibliographie": {
+    "tome1": {
+      "name": "Nicolas de Staël catalogue raisonné de l'œuvre peint",
+      "author": "François de Staël",
+      "editor": "Ides et Calendes",
+      "w": "114",
+      "h": "161",
+      "characteristics": {
+        "type": "Album",
+        "pages": "1280",
+        "format": "24 x 30",
+        "content": "Illustrations",
+        "cover": "Relié, couverture illustrée"
+      },
+      "info": "Dans cet ouvrage, vous trouverez l'intégralité de l'œuvre peint de Nicolas de Staël dans un ouvrage très richement illustré, réalisé par Françoise de Staël"
+    },
+    "tome2": {
+      "name": "La mesure de nicolas de stael",
+      "author": "Jean-Pierre Jouffroy",
+      "editor": "Ides et Calendes",
+      "w": "150",
+      "h": "184",
+      "characteristics": {
+        "type": "Album",
+        "pages": "240",
+        "format": "25 x 32",
+        "content": "127 illustrations",
+        "cover": "Relié, couverture illustrée"
+      },
+      "info": ""
+    },
+    "tome3": {
+      "name": "Le prince foudroye la vie de nicolas de staël",
+      "author": "Laurent Greilsamer",
+      "editor": "Fayard",
+      "w": "115",
+      "h": "175",
+      "characteristics": {
+        "type": "Document ",
+        "pages": "335",
+        "format": "18 x 23",
+        "content": "Illustrations",
+        "cover": "Broché, couverture illustrée"
+      },
+      "info": ""
+    },
+    "tome4": {
+      "name": "Nicolas de Stael, L'aventure en peinture",
+      "author": "Arno Mansar",
+      "editor": "La renaissance du livre",
+      "w": "108",
+      "h": "178",
+      "characteristics": {
+        "type": "Document",
+        "pages": "236",
+        "format": "18 x 24",
+        "content": "Illustrations",
+        "cover": "Broché, couverture illustrée"
+      },
+      "info": ""
+    },
+    "tome5": {
+      "name": "Nicolas de Staël",
+      "author": "Jean Louis Prat",
+      "editor": "Fondation Pierre Gianada",
+      "w": "136",
+      "h": "150",
+      "characteristics": {
+        "type": "Catalogue",
+        "pages": "232",
+        "format": "22 x 24",
+        "content": "Illustrations",
+        "cover": "Relié, couverture illustrée"
+      },
+      "info": ""
     }
   }
 }

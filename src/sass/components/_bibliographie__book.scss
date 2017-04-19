@@ -1,0 +1,8 @@
+.bibliographie__book{
+  margin-bottom: 2em;
+  max-width: 34em;
+
+  &:nth-child(even) {
+    margin-left: auto;
+  }
+}

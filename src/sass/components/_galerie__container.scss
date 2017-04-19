@@ -1,0 +1,21 @@
+.galerie__figure-container{
+  margin-right: 20px;
+  margin-bottom: 40px;
+  background-color: rgba($box-bcg-color, 0.9);
+  box-shadow: 3px 3px 5px $dark-gray;
+}
+
+//javascript enable
+
+.js-enable .galerie__figure-container{
+  background-color: initial;
+  box-shadow: initial ;
+  min-width: initial;
+  width: 113px;
+  height: 113px;
+  border-radius: 50%;
+
+  &:nth-child(8n+1){
+    margin-left: 130px;
+  }
+}

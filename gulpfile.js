@@ -89,5 +89,6 @@ gulp.task( "watch", [ "browserSync" ], function() {
 
 // --- Aliases
 
-gulp.task( "default", [ "images", "html", "css", "js" ] );
+gulp.task( "default", [ "html", "css", "js" ] );
+gulp.task( "image", [ "images" ] );
 gulp.task( "work", [ "default", "watch" ] );

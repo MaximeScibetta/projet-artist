@@ -6,15 +6,17 @@ block page-name
 
 block content
     each val, index in galerie
-        figure(class=pageName + '__figure')
-            img(src="assets/images/"+index, width=val.w, height=val.h, class=pageName + '__image')
-            figcaption(class=pageName + '__image__caption')
-                ul
-                    li(class="")= val.name
-                    li(class="")= val.date
-                    li(class="")= val.technique
-                    li(class="")= val.dimension
-                    li(class="")= val.place
+        div(class=pageName + '__figure-container')
+            figure(class=pageName + '__figure')
+                span(class=pageName + '__close-button') Fermer
+                img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Image de l'œuvre: " + val.name, class=pageName + '__image')
+                figcaption(class=pageName + '__image__caption')
+                    ul
+                        li(class="")= val.name
+                        li(class="")= val.date
+                        li(class="")= val.technique
+                        li(class="")= val.dimension
+                        li(class="")= val.place
 
 
 

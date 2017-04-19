@@ -16,6 +16,7 @@
 @import "base/main";
 @import "base/paragraph";
 @import "base/links";
+@import "base/ul__ul";
 @import "base/footer";
 
 
@@ -31,8 +32,18 @@
 @import "components/biographie__image_caption";
 @import "components/biographie__text";
 @import "components/galerie";
+@import "components/galerie__container";
 @import "components/galerie__figure";
 @import "components/galerie__image";
+@import "components/galerie__close-button";
+@import "components/bibliographie__book";
+@import "components/bibliographie__book__heading";
+@import "components/bibliographie__book__figure";
+@import "components/bibliographie__book__image";
+@import "components/bibliographie__book__info";
+@import "components/liens__links-list";
+@import "components/liens__links-list__item";
+@import "components/liens__links-list__link";
 @import "components/site-footer__link";
 
 
