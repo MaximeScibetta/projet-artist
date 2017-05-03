@@ -12,7 +12,6 @@
     "gulp-csso": "^2.0.0",
     "gulp-image": "^2.7.5",
     "gulp-pug": "^3.2.0",
-    "browser-sync": "^2.18.7",
     "gulp-sass": "^3.1.0"
   }
 }

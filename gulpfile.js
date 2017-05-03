@@ -24,8 +24,7 @@ var gulp = require( "gulp" ),
     autoprefixer = require( "gulp-autoprefixer" ),
     csso = require( "gulp-csso" ),
     pug = require( "gulp-pug" ),
-    babel = require( "gulp-babel" ),
-    browserSync = require('browser-sync').create();
+    babel = require( "gulp-babel" );
 
 // --- Task for images
 
@@ -63,28 +62,18 @@ gulp.task( "js", function() {
         .pipe( gulp.dest( "assets/js" ) );
 } );
 
-// --- Task for browser-sync
-
-gulp.task( "browserSync", function() {
-    browserSync.init( {
-        server: {
-            baseDir: "./"
-        }
-    } );
-} );
-
 
 // --- Watch tasks
 
-gulp.task( "watch", [ "browserSync" ], function() {
+gulp.task( "watch", function() {
     gulp.watch( src.img + "/**", [ "images" ] );
     gulp.watch( src.scss + "/**/*.scss", [ "css" ] );
     gulp.watch( src.pug + "/**/*.pug", [ "html" ] );
     gulp.watch( src.js + "/**/*.js", [ "js" ] );
 
-    gulp.watch( dest.html + "/**/*.html", browserSync.reload );
-    gulp.watch( dest.css + "/**/*.css", browserSync.reload );
-    gulp.watch( dest.js + "/**/*.js", browserSync.reload );
+    gulp.watch( dest.html + "/**/*.html" );
+    gulp.watch( dest.css + "/**/*.css" );
+    gulp.watch( dest.js + "/**/*.js" );
 } );
 
 // --- Aliases
