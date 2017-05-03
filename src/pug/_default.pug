@@ -8,12 +8,14 @@ html(lang="fr")
     head
         meta(charset="utf-8")
         title= pageName + ' - ' + projectName
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1")
         link(rel="stylesheet", href="assets/css/styles.css")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1")
-        meta(http-equiv="x-ua-compatible" content="ie=edge")
-        meta(name="description" content="Projet (The Artist) réalisé dans le cadre du cours de design web")
-        meta(name="author" content=webmasterName)
-        meta(name="keywords" content=projectName + " , design web, HEPL, infographie")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        meta(name="description", content="Projet (The Artist) réalisé dans le cadre du cours de design web")
+        meta(name="author", content=webmasterName)
+        meta(name="keywords", content=projectName + " , design web, HEPL, infographie")
+        link(rel="shortcut icon", href="favicon.ico")
+        //link(rel="icon", type="image/gif", href="animated_favicon1.gif")
         <!--[if lt IE 9]>
         script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
         <![endif]-->
@@ -27,21 +29,21 @@ html(lang="fr")
                 each val in ['biographie', 'galerie', 'bibliographie', 'liens', 'pratique']
                     if (pageName == val)
                         if (val == 'biographie')
-                            li.main-nav__list-item: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                         else
-                            li.main-nav__list-item: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                     else
                         if (val == 'biographie')
-                            li.main-nav__list-item: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                         else
-                            li.main-nav__list-item: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
 
 
 
 
         main.wrap(role="main")
             h1.page-heading(role="heading", aria-level="1")= firstLetterMaj(pageName)
-            div(class=pageName)
+            div(class=pageNameClass)
                 block content
 
 
