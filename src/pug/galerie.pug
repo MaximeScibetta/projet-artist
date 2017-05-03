@@ -2,15 +2,16 @@ extends _default.pug
 
 block page-name
     - var pageName = 'galerie'
+    - var pageNameClass = 'galerie'
 
 
 block content
     each val, index in galerie
-        div(class=pageName + '__figure-container')
-            figure(class=pageName + '__figure')
-                span(class=pageName + '__close-button') Fermer
-                img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Image de l'œuvre: " + val.name, class=pageName + '__image')
-                figcaption(class=pageName + '__image__caption')
+        div(class=pageNameClass + '__figure-container')
+            figure(class=pageNameClass + '__figure')
+                span(class=pageNameClass + '__close-button') Fermer
+                img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Image de l'œuvre: " + val.name, class=pageNameClass + '__image')
+                figcaption(class=pageNameClass + '__image__caption')
                     ul
                         li(class="")= val.name
                         li(class="")= val.date
