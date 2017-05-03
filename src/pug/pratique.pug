@@ -1,8 +1,18 @@
 extends _default.pug
 
 block page-name
-    - var pageName = 'pratique'
+    - var pageName = 'exposition ' + projectName
+    - var pageNameClass = 'pratique'
 
 
 block content
-    div test
+    ul(class=pageNameClass + '__infos-list')
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__address') Palais des Beaux-Arts de Houtesiplou
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__date') Du 20 novembre 2017 au 18 mars 2018
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__schedule') Ouvert tous les jours de 10 à 18 heures sauf le lundi
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__price')
+            span(class=pageNameClass + '__infos-list__sub-part')= 'Entrée : '
+            span(class=pageNameClass + '__infos-list__sub-part') Adultes 4 € - Enfants 2 €
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass +'__infos-list__phone')
+            span(class=pageNameClass + '__infos-list__sub-part')= 'Téléphone : '
+            span(class=pageNameClass + '__infos-list__sub-part') +32 (0) 470 67 67 67
