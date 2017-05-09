@@ -12,18 +12,14 @@ l'artise et la prochaine exposition, et possibilité de commander son catalogue.
 ## Langages et outils utilisés :
 
 - html
-- css
+- css (sass/scss)
+- javascript
 - gulp
     - gulp-pug
     - gulp-sass(.scss)
     - gulp-image
     - gulp-autoprefixer
     - gulp-csso
-    - browser-sync (crée un server local pour le hrml uniquement)
-
-### Et au final aussi:
-
-- javascript
-- gulp
     - gulp-babel
+    - ~~browser-sync (crée un server local pour le hrml uniquement)~~ => Homestead / Vagrant
 
