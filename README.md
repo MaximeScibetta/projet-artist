@@ -11,9 +11,9 @@ l'artise et la prochaine exposition, et possibilité de commander son catalogue.
 
 ## Langages et outils utilisés :
 
-- html
+- html (pug/jade)
 - css (sass/scss)
-- javascript
+- javascript (es2015-es2016)
 - gulp
     - gulp-pug
     - gulp-sass(.scss)
@@ -21,5 +21,5 @@ l'artise et la prochaine exposition, et possibilité de commander son catalogue.
     - gulp-autoprefixer
     - gulp-csso
     - gulp-babel
-    - ~~browser-sync (crée un server local pour le hrml uniquement)~~ => Homestead / Vagrant
+    - ~~browser-sync (crée un server local pour le hrml uniquement)~~ => Homestead / Vagrant (qui n'est pas un plugin gulp)
 
