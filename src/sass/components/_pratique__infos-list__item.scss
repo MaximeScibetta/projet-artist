@@ -1,0 +1,44 @@
+.pratique__infos-list__item{
+  background-color: $box-bcg-color;
+  width: 170px;
+  border-radius: 10px;
+  min-height: 130px;
+  padding: 30px 10px;
+  text-align: center;
+  position: relative;
+
+
+  $infos__list__item: address date schedule price phone;
+  &:after{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    left: 65px;
+    top: -20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #fff;
+  }
+  $x: -16.8px;
+  @each $item in $infos__list__item {
+    &--#{$item}:after{
+      background-image: url("../images/icones.svg");
+      background-repeat: no-repeat;
+      background-position-x: $x;
+      background-size: cover;
+    }
+    $x:$x - 47.5px;
+  }
+}
+
+//javascript enable
+
+.js-enable .galerie__figure-container{
+
+
+  &:nth-child(8n+1){
+
+  }
+}

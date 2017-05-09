@@ -1,0 +1,27 @@
+.galerie__image-link{
+  display: none;
+}
+
+//javascript enable
+
+.js-enable .galerie__image-link{
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  width: 113px;
+  height: 113px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 25px 4px $image-link-hover-border-color ;
+  }
+
+  &--disable{
+    display: none;
+  }
+}

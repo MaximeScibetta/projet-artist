@@ -1,21 +1,11 @@
 //javascript enable
 
 .js-enable .galerie__figure{
-  background-color: rgba($box-bcg-color, 0.9);
+  background-color: rgba($box-bcg-color, 1);
   width: 113px;
   height: 113px;
   overflow: hidden;
   border-radius: 50%;
-
-  &:hover{
-    box-shadow: 0px 0px 1px 4px $image-link-hover-border-color ;
-    cursor: pointer;
-  }
-  &--disable:hover{
-    box-shadow: initial ;
-    cursor: initial;
-  }
-
 
   &--on-click{
     border-radius: initial;
@@ -23,14 +13,10 @@
     width: 380px;
     height: auto;
     margin: 0 0 0 -190px;
-    box-shadow: 3px 3px 3px $dark-gray ;
+    box-shadow: 0px 0px 3px $dark-gray ;
     position: fixed;
-    left: 50vw;
+    left: 49.6vw;
     top: 30vh;
-
-    &:hover{
-      cursor: initial;
-      box-shadow: 3px 3px 5px $dark-gray ;
-    }
+    z-index: 1;
   }
 }

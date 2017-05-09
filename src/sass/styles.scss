@@ -20,30 +20,50 @@
 @import "base/footer";
 
 
+@import "components/site__heading";
+
 @import "components/wrap";
+
 @import "components/main-nav";
-@import "components/_main-nav__list";
+@import "components/_main-nav__list__item";
 @import "components/main-nav__link";
 @import "components/main-nav__link--active";
+
 @import "components/page-heading";
-@import "components/biographie";
+
+@import "components/biographie__teasing";
+@import "components/biographie__container";
 @import "components/biographie__figure";
 @import "components/biographie__image";
 @import "components/biographie__image_caption";
 @import "components/biographie__text";
+
 @import "components/galerie";
-@import "components/galerie__container";
+@import "components/_galerie__figure-container";
 @import "components/galerie__figure";
 @import "components/galerie__image";
+@import "components/galerie__image-link";
 @import "components/galerie__close-button";
+
+@import "components/bibliographie";
 @import "components/bibliographie__book";
 @import "components/bibliographie__book__heading";
 @import "components/bibliographie__book__figure";
 @import "components/bibliographie__book__image";
 @import "components/bibliographie__book__info";
+
 @import "components/liens__links-list";
 @import "components/liens__links-list__item";
 @import "components/liens__links-list__link";
+
+@import "components/pratique__infos-list";
+@import "components/pratique__infos-list__item";
+@import "components/pratique__infos-list__sub-part";
+@import "components/pratique__catalog-form-container__title";
+@import "components/pratique__catalog-form-container__form";
+@import "components/pratique__catalog-form-container__label";
+@import "components/pratique__catalog-form-container__input";
+
 @import "components/site-footer__link";
 
 

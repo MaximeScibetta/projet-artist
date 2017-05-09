@@ -22,21 +22,21 @@ html(lang="fr")
 
     body
         header.wrap(role="banner")
-            h1(role="heading", aria-level="1"): span= projectName
-            nav(aria-labelledby="mainMenuHeading", role="navigation")
+            h1(role="heading", aria-level="1", class="site__heading"): span= projectName
+            nav(aria-labelledby="mainMenuHeading", role="navigation", class="main-nav")
                 h2.visually-hidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
-            ul.main-nav
-                each val in ['biographie', 'galerie', 'bibliographie', 'liens', 'pratique']
-                    if (pageName == val)
-                        if (val == 'biographie')
-                            li.main-nav__list: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                ul.main-nav__list
+                    each val in ['biographie', 'galerie', 'bibliographie', 'liens', 'pratique']
+                        if (pageNameClass == val)
+                            if (val == 'biographie')
+                                li.main-nav__list__item: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            else
+                                li.main-nav__list__item: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                         else
-                            li.main-nav__list: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
-                    else
-                        if (val == 'biographie')
-                            li.main-nav__list: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
-                        else
-                            li.main-nav__list: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            if (val == 'biographie')
+                                li.main-nav__list__item: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            else
+                                li.main-nav__list__item: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
 
 
 
@@ -47,7 +47,7 @@ html(lang="fr")
                 block content
 
 
-        footer.wrap.site-footer(role="contentinfo")
+        footer.site-footer(role="contentinfo")
             ul
                 li: a.site-footer__link(href="mailto:" + webmasterMail, title="Envoyer un email au webmaster depuis votre boîte mail par défaut") Contact the Webmaster
                 li= 'Designed by ' + webmasterName

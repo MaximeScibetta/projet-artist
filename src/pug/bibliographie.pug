@@ -15,11 +15,9 @@ block content
                     ul(class=pageNameClass + '__book__info')
                         li!= 'Auteur&nbsp;: ' + val.author
                         li!= 'Éditeur&nbsp;: ' + val.editor
-                        li!= 'Caractéristiques'
-                            ul
-                                li!= 'Type&nbsp;: ' + val.characteristics.type
-                                li!= 'Nombre de pages&nbsp;: ' + val.characteristics.pages
-                                li!= 'Format&nbsp;: ' + val.characteristics.format
-                                li!= 'Reliure et couverture&nbsp;: ' + val.characteristics.cover
+                        li!= 'Type&nbsp;: ' + val.characteristics.type
+                        li!= 'Nombre de pages&nbsp;: ' + val.characteristics.pages
+                        li!= 'Format&nbsp;: ' + val.characteristics.format
+                        li!= 'Reliure et couverture&nbsp;: ' + val.characteristics.cover
                         if (val.info)
-                            li!= val.info
+                            li!= 'Présentation&nbsp;: ' + val.info

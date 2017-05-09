@@ -4,6 +4,8 @@
   color: $link-txt-color;
   font-weight: bold;
   padding: 10px 15px;
+  background-color: transparent;
+  border: none;
 
   &:hover{
     color: $link-hover-txt-color;

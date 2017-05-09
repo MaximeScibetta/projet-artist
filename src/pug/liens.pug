@@ -7,6 +7,13 @@ block page-name
 
 block content
     ul(class=pageNameClass + '__links-list')
-        each val,index in {'Officiel des arts': '', 'Maulpoix': '', 'Poster shop': '', 'My climats painters': '', 'pro wanadoo': ''}
-            li(class=pageNameClass + '__links-list__item')
-                a(href=val, class=pageNameClass + '__links-list__link')= index
+        li(class=pageNameClass + '__links-list__item')
+            a(href="#", class=pageNameClass + '__links-list__link', title="visiter le site web Officiel des arts", rel="external")= 'Officiel des arts'
+        li(class=pageNameClass + '__links-list__item')
+            a(href="#", class=pageNameClass + '__links-list__link', title="visiter le site web Maulpoix", rel="external")= 'Maulpoix'
+        li(class=pageNameClass + '__links-list__item')
+            a(href="#", class=pageNameClass + '__links-list__link', title="visiter le site web Poster shop", hreflang="en", rel="external")= 'Poster shop'
+        li(class=pageNameClass + '__links-list__item')
+            a(href="#", class=pageNameClass + '__links-list__link', title="visiter le site web My climats painters", hreflang="en", rel="external")= 'My climats painters'
+        li(class=pageNameClass + '__links-list__item')
+            a(href="#", class=pageNameClass + '__links-list__link', title="visiter le site web pro wanadoo", rel="external")= 'pro wanadoo'
