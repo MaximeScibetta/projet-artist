@@ -10,5 +10,10 @@
   color: $white-color;
   font-weight: 700;
   margin-top: .5em;
+
+  &:hover{
+    background-color: $link-hover-txt-color;
+    cursor: pointer;
+  }
 }
 

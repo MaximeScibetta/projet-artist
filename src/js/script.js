@@ -1,19 +1,11 @@
 /***********************************/
-/*** variables "globales" (IIFE) ***/
-/***********************************/
-
-const $GalerieImageLink = document.querySelectorAll('.galerie__image-link'); // tableau de chaque <a> de la galerie se trouvant dans une figure.
-
-/******************************************************************************/
-/*** les fonctions du script (les utilisées avant celles qui les utilisent) ***/
-/******************************************************************************/
 
 /*  La fonction fZoomImage parcours chaque image de la galerie et ajoute la classe 'galerie__figure--active' à la <figure> qui la contient à celle qui subit un clic.
-    - paramètres :
-    - /
+    - paramètres : /
     - retour : /
 */
 const fZoomImage = function () {
+    const $GalerieImageLink = document.querySelectorAll('.galerie__image-link'); // tableau de chaque <a> de la galerie se trouvant dans une figure.
 
     const fImageClicked = function(e) {
         e.currentTarget.nextSibling.classList.add('galerie__figure--on-click');
@@ -47,20 +39,55 @@ const fZoomImage = function () {
         }
     };
 
-    const fZoomImageStart = function () {
-        document.querySelector('body').classList.add('js-enable');
-        document.addEventListener('keyup', fEscapePressed, false);
-        let i = 0;
-        while ($GalerieImageLink[i]){
-            $GalerieImageLink[i].addEventListener('click', fImageClicked, false);
-            $GalerieImageLink[i].parentNode.querySelector('.galerie__close-button').addEventListener('click', fImageCloseButtonClicked, false);
+
+    document.addEventListener('keyup', fEscapePressed, false);
+    let i = 0;
+    while ($GalerieImageLink[i]){
+        $GalerieImageLink[i].addEventListener('click', fImageClicked, false);
+        $GalerieImageLink[i].parentNode.querySelector('.galerie__close-button').addEventListener('click', fImageCloseButtonClicked, false);
+        i++
+    }
+};
+
+
+/*  La fonction fCheckForm parcours chaque input du formulair et à la perte de focus, il verifie si un contenu est présent, si vide il ajoute les class permettant d'afficher un message d'erreur.
+ - paramètres : /
+ - retour : /
+ */
+const fCheckForm = function () {
+    const $Inputs = document.querySelectorAll('.pratique__catalog-form-section__input');
+    const $FormAlert = document.querySelector('.pratique__catalog-form-section__alert');
+
+
+    const fCheckInput = function (e) {
+
+        if (e.currentTarget.value == '' ){
+            e.currentTarget.classList.add('pratique__catalog-form-section__input--invalid');
+        }else {
+            e.currentTarget.classList.remove('pratique__catalog-form-section__input--invalid');
+        }
+
+        let i = 0, nbError = 0;
+        while ($Inputs[i]){
+            if ($Inputs[i].classList.contains('pratique__catalog-form-section__input--invalid')){
+                nbError += 1;
+            }
             i++
         }
+        console.log(nbError);
+        if (nbError){
+            $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
+        }else {
+            $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
+        }
     };
-    fZoomImageStart();
-}
 
-
+    let i = 0;
+    while ($Inputs[i]){
+        $Inputs[i].addEventListener('blur', fCheckInput, false);
+        i++
+    }
+};
 
 /*****************************************************************************************************/
 /*** la fonction qui démarre le script (une fois la page Web complètement téléchargée et affichée) ***/
@@ -72,7 +99,9 @@ const fZoomImage = function () {
 */
 const fPageIsLoaded = function () {
 
+    document.querySelector('body').classList.add('js-enable');
     fZoomImage();
+    fCheckForm();
 
 
 };

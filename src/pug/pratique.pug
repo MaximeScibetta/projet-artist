@@ -22,25 +22,26 @@ block content
     section(aria-labelledby=pageNameClass + '__catalog-form-section__title', class=pageNameClass + '__catalog-form-section')
         h2(id=pageNameClass + '__catalog-form-section__title', aria-level="2", class=pageNameClass + '__catalog-form-section__title') Demandez votre catalogue
         form(class=pageNameClass + '__catalog-form-section__form', action="#", method="post")
+            p(class=pageNameClass + '__catalog-form-section__alert', role="alert") Veuillez remplir tous les champs
             div(class=pageNameClass + '__catalog-form-section__form__part')
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="lastname-input")!= 'Nom'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="lastname", placeholder="Snow", id="lastname-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="lastname", placeholder="Snow", id="lastname-input", aria-required="true", aria-invalid="false")
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="firstname-input")!= 'Prénom'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="firstname", placeholder="Jon", id="firstname-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="firstname", placeholder="Jon", id="firstname-input", aria-required="true", aria-invalid="false")
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="address-input")!= 'Adresse'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="address", placeholder="Rue Bidule 125", id="address-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="address", placeholder="Rue Bidule 125", id="address-input", aria-required="true", aria-invalid="false")
             div(class=pageNameClass + '__catalog-form-section__form__part')
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="post-code-input")!= 'Code postal'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="post_code", placeholder="1000", id="post-code-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="post_code", placeholder="1000", id="post-code-input", aria-required="true", aria-invalid="false")
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="city-input")!= 'Ville'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="city", placeholder="Bruxelles", id="city-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="city", placeholder="Bruxelles", id="city-input", aria-required="true", aria-invalid="false")
                 div
                     label(class=pageNameClass + '__catalog-form-section__label', for="country-input")!= 'Pays'
-                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="country", placeholder="Belgique", id="country-input")
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="country", placeholder="Belgique", id="country-input", aria-required="true", aria-invalid="false")
             input(class=pageNameClass + '__catalog-form-section__submit', type="submit", value="Commander")
 
