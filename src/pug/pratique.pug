@@ -17,28 +17,30 @@ block content
             span(class=pageNameClass + '__infos-list__sub-part')= 'Enfants 2 €'
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass +'__infos-list__item--phone')
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Téléphone&nbsp;: '
-            a(class=pageNameClass + '__infos-list__sub-part', href="tel:+32470676767", title="Nous Appeler via numéro de téléphone") +32 (0) 470 67 67 67
+            a(class=pageNameClass + '__infos-list__sub-part', href="tel:+32470676767", title="Nous Appeler via ce numéro de téléphone") +32 (0) 470 67 67 67
 
-    section(aria-labelledby=pageNameClass + '__catalog-form-container__title', class=pageNameClass + '__catalog-form-container')
-        h2(id=pageNameClass + '__catalog-form-container__title', aria-level="2", class=pageNameClass + '__catalog-form-container__title') Demandez votre catalogue
-        form(class=pageNameClass + '__catalog-form-container__form', action="#", method="post")
-            label(class=pageNameClass + '__catalog-form-container__label', for="lastname-input")!= 'Nom&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="lastname", placeholder="Snow", id="lastname-input")
-
-            label(class=pageNameClass + '__catalog-form-container__label', for="firstname-input")!= 'Téléphone&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="firstname", placeholder="Jon", id="firstname-input")
-
-            label(class=pageNameClass + '__catalog-form-container__label', for="address-input")!= 'Téléphone&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="address", placeholder="Rue Bidule 125", id="address-input")
-
-            label(class=pageNameClass + '__catalog-form-container__label', for="post-code-input")!= 'Téléphone&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="post_code", placeholder="1000", id="post-code-input")
-
-            label(class=pageNameClass + '__catalog-form-container__label', for="city-input")!= 'Téléphone&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="city", placeholder="Bruxelles", id="city-input")
-
-            label(class=pageNameClass + '__catalog-form-container__label', for="country-input")!= 'Téléphone&nbsp;: '
-            input(class=pageNameClass + '__catalog-form-container__input', type="text", name="country", placeholder="Belgique", id="country-input")
-
-            input(class=pageNameClass + '__catalog-form-container__submit', type="submit", value="Demander")
+    section(aria-labelledby=pageNameClass + '__catalog-form-section__title', class=pageNameClass + '__catalog-form-section')
+        h2(id=pageNameClass + '__catalog-form-section__title', aria-level="2", class=pageNameClass + '__catalog-form-section__title') Demandez votre catalogue
+        form(class=pageNameClass + '__catalog-form-section__form', action="#", method="post")
+            div(class=pageNameClass + '__catalog-form-section__form__part')
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="lastname-input")!= 'Nom'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="lastname", placeholder="Snow", id="lastname-input")
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="firstname-input")!= 'Prénom'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="firstname", placeholder="Jon", id="firstname-input")
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="address-input")!= 'Adresse'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="address", placeholder="Rue Bidule 125", id="address-input")
+            div(class=pageNameClass + '__catalog-form-section__form__part')
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="post-code-input")!= 'Code postal'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="post_code", placeholder="1000", id="post-code-input")
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="city-input")!= 'Ville'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="city", placeholder="Bruxelles", id="city-input")
+                div
+                    label(class=pageNameClass + '__catalog-form-section__label', for="country-input")!= 'Pays'
+                    input(class=pageNameClass + '__catalog-form-section__input', type="text", name="country", placeholder="Belgique", id="country-input")
+            input(class=pageNameClass + '__catalog-form-section__submit', type="submit", value="Commander")
 

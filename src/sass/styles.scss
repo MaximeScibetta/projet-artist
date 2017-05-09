@@ -59,10 +59,12 @@
 @import "components/pratique__infos-list";
 @import "components/pratique__infos-list__item";
 @import "components/pratique__infos-list__sub-part";
-@import "components/pratique__catalog-form-container__title";
-@import "components/pratique__catalog-form-container__form";
-@import "components/pratique__catalog-form-container__label";
-@import "components/pratique__catalog-form-container__input";
+@import "components/_pratique__catalog-form-section__title";
+@import "components/_pratique__catalog-form-section__form";
+@import "components/_pratique__catalog-form-section__form__part";
+@import "components/_pratique__catalog-form-section__label";
+@import "components/_pratique__catalog-form-section__input";
+@import "components/_pratique__catalog-form-section__submit";
 
 @import "components/site-footer__link";
 
