@@ -57,7 +57,38 @@ const fZoomImage = function () {
 const fCheckForm = function () {
     const $Inputs = document.querySelectorAll('.pratique__catalog-form-section__input');
     const $FormAlert = document.querySelector('.pratique__catalog-form-section__alert');
+    const $Form = document.querySelector('.pratique__catalog-form-section__form');
 
+
+    const fSubmit = function (e) {
+        let i = 0;
+        while ($Inputs[i]){
+            if ($Inputs[i].value == ''){
+                $Inputs[i].classList.add('pratique__catalog-form-section__input--invalid');
+            }
+            i++
+        }
+        if (!fCheckAllInputs()){
+            e.preventDefault();
+        }
+    };
+
+    const fCheckAllInputs = function () {
+        let i = 0, nbError = 0;
+        while ($Inputs[i]){
+            if ($Inputs[i].classList.contains('pratique__catalog-form-section__input--invalid')){
+                nbError += 1;
+            }
+            i++
+        }
+        if (nbError){
+            $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
+            return false;
+        }else {
+            $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
+            return true;
+        }
+    };
 
     const fCheckInput = function (e) {
 
@@ -66,20 +97,7 @@ const fCheckForm = function () {
         }else {
             e.currentTarget.classList.remove('pratique__catalog-form-section__input--invalid');
         }
-
-        let i = 0, nbError = 0;
-        while ($Inputs[i]){
-            if ($Inputs[i].classList.contains('pratique__catalog-form-section__input--invalid')){
-                nbError += 1;
-            }
-            i++
-        }
-        console.log(nbError);
-        if (nbError){
-            $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
-        }else {
-            $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
-        }
+        fCheckAllInputs();
     };
 
     let i = 0;
@@ -87,6 +105,7 @@ const fCheckForm = function () {
         $Inputs[i].addEventListener('blur', fCheckInput, false);
         i++
     }
+    $Form.addEventListener('click', fSubmit, false);
 };
 
 /*****************************************************************************************************/
