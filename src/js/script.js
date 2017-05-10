@@ -105,7 +105,7 @@ const fCheckForm = function () {
         $Inputs[i].addEventListener('blur', fCheckInput, false);
         i++
     }
-    $Form.addEventListener('click', fSubmit, false);
+    $Form.addEventListener('submit', fSubmit, false);
 };
 
 /*****************************************************************************************************/
