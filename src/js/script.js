@@ -57,21 +57,9 @@ const fZoomImage = function () {
 const fCheckForm = function () {
     const $Inputs = document.querySelectorAll('.pratique__catalog-form-section__input');
     const $FormAlert = document.querySelector('.pratique__catalog-form-section__alert');
+    const $FormSent = document.querySelector('.pratique__catalog-form-section__sent');
     const $Form = document.querySelector('.pratique__catalog-form-section__form');
 
-
-    const fSubmit = function (e) {
-        let i = 0;
-        while ($Inputs[i]){
-            if ($Inputs[i].value == ''){
-                $Inputs[i].classList.add('pratique__catalog-form-section__input--invalid');
-            }
-            i++
-        }
-        if (!fCheckAllInputs()){
-            e.preventDefault();
-        }
-    };
 
     const fCheckAllInputs = function () {
         let i = 0, nbError = 0;
@@ -83,10 +71,27 @@ const fCheckForm = function () {
         }
         if (nbError){
             $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
+            $FormSent.classList.remove('pratique__catalog-form-section__sent--valid');
             return false;
         }else {
             $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
             return true;
+        }
+    };
+
+    const fSubmit = function (e) {
+        let i = 0;
+        while ($Inputs[i]){
+            if ($Inputs[i].value == ''){
+                $Inputs[i].classList.add('pratique__catalog-form-section__input--invalid');
+            }
+            i++
+        }
+        if (!fCheckAllInputs()){
+            e.preventDefault();
+        }else{
+            $FormSent.classList.add('pratique__catalog-form-section__sent--valid');
+            e.preventDefault();
         }
     };
 

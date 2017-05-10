@@ -1,0 +1,14 @@
+.pratique__catalog-form-section__sent{
+  width: 420px;
+  color: $sent-color;
+  margin: 0 auto;
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: -25px;
+}
+
+//invalid form inputs
+.pratique__catalog-form-section__sent--valid{
+  display: block;
+}
