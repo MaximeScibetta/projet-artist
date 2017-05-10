@@ -8,7 +8,7 @@ block page-name
 block content
     each val, index in bibliographie
         section(aria-labelledby=index + 'Heading', class=pageNameClass + '__book')
-            h2(id=index + 'Heading', aria-level="2", class=pageNameClass + '__book__heading')= val.name
+            h2(id=index + 'Heading', aria-level="2", role="heading", class=pageNameClass + '__book__heading')= val.name
             figure(class=pageNameClass + '__book__figure')
                 img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Première de couverture de l'ouvrage: " + val.name, class=pageNameClass + '__image', class=pageNameClass + '__book__image')
                 figcaption(class=pageNameClass + '__image__caption')
