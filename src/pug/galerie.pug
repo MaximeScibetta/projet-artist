@@ -10,15 +10,15 @@ block content
         div(class=pageNameClass + '__figure-container')
             button(class=pageNameClass + '__image-link')
             figure(class=pageNameClass + '__figure')
-                    img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Image de l'œuvre: " + val.name, class=pageNameClass + '__image')
-                    button(class=pageNameClass + '__close-button') Fermer
-                    figcaption(class=pageNameClass + '__image__caption')
-                        ul
-                            li(class="")= val.name
-                            li(class="")= val.date
-                            li(class="")= val.technique
-                            li(class="")= val.dimension
-                            li(class="")= val.place
+                img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Image de l'œuvre: " + val.name, class=pageNameClass + '__image')
+                button(class=pageNameClass + '__close-button') Fermer
+                figcaption(class=pageNameClass + '__image__caption')
+                    ul
+                        li(class="")= val.name
+                        li(class="")= val.date
+                        li(class="")= val.technique
+                        li(class="")= val.dimension
+                        li(class="")= val.place
 
-
+    a(class=pageNameClass + '__cta-bibliographie cta', href='bibliographie.html',  title='Aller vers la page bibliographie') Parcourir sa bibliographie
 

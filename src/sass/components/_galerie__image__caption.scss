@@ -1,0 +1,57 @@
+.galerie__image__caption{
+
+  margin-bottom: 1em;
+
+  //nom de l'oevre
+  & li:first-of-type {
+  font-weight: 700;
+    margin-bottom: 0.4em;
+  }
+
+  //date
+  & li:nth-of-type(2){
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $dark-gray;
+    color: $white-color;
+    padding: .3em;
+  }
+
+  & li:last-of-type{
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .5em 1em;
+  }
+}
+
+
+// js enable
+
+.js-enable .galerie__figure{
+
+  & li:last-of-type{
+    position: static;
+  }
+
+  & li:nth-of-type(2){
+    position: static;
+  }
+
+  &--on-click{
+
+    & li:last-of-type{
+      font-style: italic;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: .5em 1em;
+    }
+
+    & li:nth-of-type(2){
+      position: absolute;
+    }
+  }
+}

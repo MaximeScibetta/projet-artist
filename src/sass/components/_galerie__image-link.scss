@@ -6,7 +6,6 @@
 
 .js-enable .galerie__image-link{
   display: block;
-  background-color: transparent;
   padding: 0;
   border: none;
   width: 113px;
@@ -15,10 +14,12 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-color: transparent;
 
-  &:hover{
+  &:hover, &:focus{
     cursor: pointer;
-    box-shadow: 0px 0px 25px 4px $image-link-hover-border-color ;
+    background-color: rgba(100,100,255,.4);
+    // box-shadow: 0px 0px 25px 4px $image-link-hover-border-color ;
   }
 
   &--disable{

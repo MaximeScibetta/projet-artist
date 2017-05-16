@@ -1,16 +1,17 @@
 .galerie__image{
-  max-height: 195px;
-  width: auto;
+  margin-bottom: .5em;
 }
 
 //javascript enable
 
 .js-enable .galerie__image{
-  max-height: 113px;
+  height: 7.5em;
   width: auto;
 }
 
 
 .js-enable .galerie__figure--on-click .galerie__image{
+  width: auto;
+  height: auto;
   max-height: none;
 }
