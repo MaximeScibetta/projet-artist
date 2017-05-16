@@ -23,3 +23,6 @@ l'artise et la prochaine exposition, et possibilité de commander son catalogue.
     - gulp-babel
     - ~~browser-sync (crée un server local pour le hrml uniquement)~~ => Homestead / Vagrant (qui n'est pas un plugin gulp)
 
+## Inspiration :
+
+- http://www.thelondonloom.com/ (galerie)
