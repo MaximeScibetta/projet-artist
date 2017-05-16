@@ -1,7 +1,7 @@
 .pratique__infos-list{
   display: flex;
-  margin: 60px auto 30px;
-  width: 940px;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 25px auto 30px;
+  width: 50em;
 }
 

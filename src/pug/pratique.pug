@@ -9,29 +9,38 @@ block content
     ul(class=pageNameClass + '__infos-list vevent', itemscope, itemtype="http://schema.org/VisualArtsEvent", id="hcalendar-event-title")
         span(hidden, class="summary", itemprop="name") Exposition Nicolas de Staël
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--address location', itemprop="location", itemscope, itemtype="http://schema.org/Place")
+            span.ico.fa.fa-map-marker
+            span(class=pageNameClass + '__infos-list__sub-part')!= 'Lieu&nbsp;: '
             span(itemprop="name"): span(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
                 span(itemprop="streetAddress")= 'Palais des Beaux-Arts '
                 meta(itemprop="addressLocality", content="Houtesiplou")
             span de Houtesiplou
             meta(itemprop="telephone", content="+32470676767")
-        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--date', itemprop="startDate", content="2017-11-20T10:00") Du #[span(class="dtstart visually-hidden") 2017-11-20T10:00+01:00]#[time(datetime="2017-11-20T10:00+01:00") 20 novembre 2017] au #[span(class="dtend visually-hidden") 2018-03-18T18:00:00+01:00]#[time(datetime="2018-03-18T18:00:00+01:00", itemprop="endDate", content="2018-03-18T18:00") 18 mars 2018]
-        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--schedule') Ouvert tous les jours de #[time(datetime="T10:00") 10] à #[time(datetime="T18:00") 18 heures] sauf le lundi
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--date', itemprop="startDate", content="2017-11-20T10:00")
+            span.ico.fa.fa-calendar
+            span(class=pageNameClass + '__infos-list__sub-part')!= 'Dates&nbsp;: '
+            span Du #[span(class="dtstart visually-hidden") 2017-11-20T10:00+01:00]#[time(datetime="2017-11-20T10:00+01:00") 20 novembre 2017] au #[span(class="dtend visually-hidden") 2018-03-18T18:00:00+01:00]#[time(datetime="2018-03-18T18:00:00+01:00", itemprop="endDate", content="2018-03-18T18:00") 18 mars 2018]
+        li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--schedule')
+            span.ico.fa.fa-clock-o
+            span(class=pageNameClass + '__infos-list__sub-part')!= 'Horaire&nbsp;: '
+            span Ouvert tous les jours de #[time(datetime="T10:00") 10] à #[time(datetime="T18:00") 18 heures] sauf le lundi
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--price')
-            div(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
+            span.ico.fa.fa-eur
+            span(class=pageNameClass + '__infos-list__sub-part')!= 'Tarifs&nbsp;: '
+            span(class=pageNameClass + '__infos-list__sub-part') Adultes 4 €
+            span(class=pageNameClass + '__infos-list__sub-part') Enfants 2 €
+            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
                 span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service")
                     span(hidden, itemprop="category") Adult entrance
                 span(hidden, itemprop="priceCurrency", content="EUR")
                 span(hidden, itemprop="price", content="4")
-            div(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
+            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
                 span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service")
                     span(hidden, itemprop="category") Children entrance
                 span(hidden, itemprop="priceCurrency", content="EUR")
                 span(hidden, itemprop="price", content="2")
-
-            span(class=pageNameClass + '__infos-list__sub-part')!= 'Entrée&nbsp;: '
-            span(class=pageNameClass + '__infos-list__sub-part') Adultes 4 €
-            span(class=pageNameClass + '__infos-list__sub-part') Enfants 2 €
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass +'__infos-list__item--phone')
+            span.ico.fa.fa-phone
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Téléphone&nbsp;: '
             a(class=pageNameClass + '__infos-list__sub-part', href="tel:+32470676767", title="Nous appeler via ce numéro de téléphone") +32 (0) 470 67 67 67
 
