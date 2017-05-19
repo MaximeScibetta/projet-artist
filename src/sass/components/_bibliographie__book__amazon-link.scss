@@ -1,0 +1,19 @@
+.bibliographie__book__amazon-link{
+  position: relative;
+  padding: 14px 18px;
+  border-radius: 4px;
+  margin-top: 6px;
+  border: 1px solid $light-gray;
+  display: inline-block;
+  color: #000000;
+
+  &:hover{
+    color: $amazon-orange;
+    border-color: $amazon-orange;
+  }
+
+
+  & img{
+    //vertical-align: -40%;
+  }
+}

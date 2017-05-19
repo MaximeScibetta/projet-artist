@@ -14,6 +14,7 @@
 @import "base/headings";
 @import "base/header";
 @import "base/main";
+@import "base/cta";
 @import "base/paragraph";
 @import "base/links";
 @import "base/ul__ul";
@@ -23,6 +24,8 @@
 @import "components/site__heading";
 
 @import "components/wrap";
+
+@import "components/amazon-ico";
 
 @import "components/main-nav";
 @import "components/main-nav__list__item";
@@ -38,6 +41,7 @@
 @import "components/biographie__image";
 @import "components/biographie__image_caption";
 @import "components/biographie__text";
+@import "components/biographie__text__quote";
 
 @import "components/galerie";
 @import "components/galerie__figure-container";
@@ -53,6 +57,8 @@
 @import "components/bibliographie__book__figure";
 @import "components/bibliographie__book__image";
 @import "components/bibliographie__book__info";
+@import "components/bibliographie__book__info__left";
+@import "components/bibliographie__book__amazon-link";
 
 @import "components/liens__links-list";
 @import "components/liens__links-list__item";
@@ -61,14 +67,14 @@
 @import "components/pratique__infos-list";
 @import "components/pratique__infos-list__item";
 @import "components/pratique__infos-list__sub-part";
+@import "components/pratique__catalog-form-section";
 @import "components/pratique__catalog-form-section__title";
 @import "components/pratique__catalog-form-section__form";
 @import "components/pratique__catalog-form-section__form__part";
-@import "components/pratique__catalog-form-section__label";
 @import "components/pratique__catalog-form-section__input";
 @import "components/pratique__catalog-form-section__submit";
 @import "components/pratique__catalog-form-section__alert";
-@import "components/pratique__catalog-form-section__sent";
+@import "components/pratique__cta-to-liens";
 
 @import "components/site-footer__link";
 

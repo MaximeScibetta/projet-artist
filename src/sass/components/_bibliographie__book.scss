@@ -1,8 +1,12 @@
 .bibliographie__book{
   margin-bottom: 4em;
-  max-width: 34em;
+  max-width: 33em;
 
   &:nth-child(even) {
     margin-left: auto;
+  }
+
+  &:last-of-type{
+    margin-bottom: 1em;
   }
 }

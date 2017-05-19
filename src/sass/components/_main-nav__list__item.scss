@@ -1,5 +1,8 @@
 .main-nav__list__item {
   display: inline;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 1em;
+
+  &:first-of-type{
+    padding-left: 1.333333em;
+  }
 }

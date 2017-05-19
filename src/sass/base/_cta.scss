@@ -1,0 +1,40 @@
+.cta{
+  display: block;
+  width: 25em;
+  padding: 1em;
+  border: 3px $link-txt-color double;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+
+  &:after{
+    font-family: FontAwesome;
+    content: '\f18e';
+    font-size: 1.999396em;
+    position: absolute;
+    top: 3em;
+    right: .6em;
+    transition: .5s;
+    padding-left: 1em;
+
+  }
+
+  &:hover, &:focus{
+    border-color: $link-hover-txt-color;
+    cursor: pointer;
+    border-style: solid;
+
+    &:after{
+      top: .19em;
+      right: .6em;
+    }
+  }
+}
+

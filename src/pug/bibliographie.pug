@@ -13,11 +13,31 @@ block content
                 img(src="assets/images/" + index + '.jpg', width=val.w, height=val.h, alt="Première de couverture de l'ouvrage: " + val.name, class=pageNameClass + '__image', class=pageNameClass + '__book__image')
                 figcaption(class=pageNameClass + '__image__caption')
                     ul(class=pageNameClass + '__book__info')
-                        li!= 'Auteur&nbsp;: ' + val.author
-                        li!= 'Éditeur&nbsp;: ' + val.editor
-                        li!= 'Type&nbsp;: ' + val.characteristics.type
-                        li!= 'Nombre de pages&nbsp;: ' + val.characteristics.pages
-                        li!= 'Format&nbsp;: ' + val.characteristics.format
-                        li!= 'Reliure et couverture&nbsp;: ' + val.characteristics.cover
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Auteur&nbsp;: '
+                            span= val.author
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Éditeur&nbsp;: '
+                            span= val.editor
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Type&nbsp;: '
+                            span= val.characteristics.type
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Nombre de pages&nbsp;: '
+                            span= val.characteristics.pages
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Format&nbsp;: '
+                            span= val.characteristics.format
+                        li
+                            span(class=pageNameClass + '__book__info__left')!= 'Reliure et couverture&nbsp;: '
+                            span= val.characteristics.cover
                         if (val.info)
-                            li!= 'Présentation&nbsp;: ' + val.info
+                            li
+                                span(class=pageNameClass + '__book__info__left')!= 'Présentation&nbsp;: '
+                                span= val.info
+                        li
+                            a(class=pageNameClass + '__book__amazon-link', href=val.amazon,  title='Acheter "' + val.name + '" sur Amazon')!= 'L&rsquo;acheter sur '
+                                span(class="amazon-ico") amazon.fr
+
+block endContent
+    a(class=pageNameClass + '__cta-to-pratique cta', href='pratique.html',  title='Aller vers la page pratique') Sa prochaine exposition

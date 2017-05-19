@@ -1,6 +1,7 @@
-/***********************************/
+let $pageTitle = document.head.getElementsByTagName('title')[0].innerText;
 
-/*  La fonction fZoomImage parcours chaque image de la galerie et ajoute la classe 'galerie__figure--active' à la <figure> qui la contient à celle qui subit un clic.
+
+/*  La fonction fZoomImage parcours chaque image(boutton) de la galerie et ajoute la classe 'galerie__figure--active' à la <figure> qui la contient à celle qui subit un clic.
     - paramètres : /
     - retour : /
 */
@@ -96,8 +97,9 @@ const fZoomImage = function () {
 const fCheckForm = function () {
     const $Inputs = document.querySelectorAll('.pratique__catalog-form-section__input');
     const $FormAlert = document.querySelector('.pratique__catalog-form-section__alert');
-    const $FormSent = document.querySelector('.pratique__catalog-form-section__sent');
+    const $FormSection = document.querySelector('.pratique__catalog-form-section');
     const $Form = document.querySelector('.pratique__catalog-form-section__form');
+    const $FormSectionTitle = document.querySelector('.pratique__catalog-form-section__title');
 
 
     const fCheckAllInputs = function () {
@@ -110,7 +112,6 @@ const fCheckForm = function () {
         }
         if (nbError){
             $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
-            $FormSent.classList.remove('pratique__catalog-form-section__sent--valid');
             return false;
         }else {
             $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
@@ -129,7 +130,8 @@ const fCheckForm = function () {
         if (!fCheckAllInputs()){
             e.preventDefault();
         }else{
-            $FormSent.classList.add('pratique__catalog-form-section__sent--valid');
+            $FormSection.classList.add('pratique__catalog-form-section--valid');
+            $FormSectionTitle.innerText = 'Formulaire bien envoyé';
             e.preventDefault();
         }
     };
@@ -162,10 +164,16 @@ const fCheckForm = function () {
 */
 const fPageIsLoaded = function () {
 
-    document.querySelector('body').classList.add('js-enable');
-    fZoomImage();
-    fCheckForm();
+    //document.querySelector('body').classList.add('js-enable');
 
+
+    if($pageTitle === 'Exposition Nicolas de Staël - Nicolas de Staël'){
+        fCheckForm();
+    }
+
+    if($pageTitle === 'Galerie - Nicolas de Staël'){
+        fZoomImage();
+    }
 
 };
 //gestion de l'événement "load" pour démarrer le script

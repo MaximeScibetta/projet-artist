@@ -1,10 +1,10 @@
 .biographie__text{
-  max-width: 35em;
+  width: 80%;
   padding: 15px 20px;
-  background-color: $box-bcg-color;
   border-radius: 10px;
   line-height: 1.6;
   letter-spacing: 0.04em;
+  margin: auto;
 
   & time{
     font-style: italic;

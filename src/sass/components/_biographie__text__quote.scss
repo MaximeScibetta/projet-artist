@@ -1,0 +1,22 @@
+.biographie__text__quote{
+  margin: 2em auto;
+  width: 80%;
+  text-align: right;
+  font: italic normal 1.4em/1.5em serif;
+  padding: 1.4em 0;
+  position: relative;
+  z-index: 5;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3em;
+    border-top: 1px solid rgb(230,230,230);
+    border-bottom: 1px solid rgb(230,230,230);
+    z-index: -1;
+  }
+}

@@ -1,5 +1,10 @@
 .biographie__figure{
-  margin-right: 40px;
-  margin-left: 105px;
-  max-width: 300px;
+  float: left;
+  margin-right: 2em;
+
+  background-color: $light-gray;
+  border-radius: 10px;
+  width: 400px;
+  padding: 20px 20px 15px;
+  display: block;
 }

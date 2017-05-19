@@ -159,19 +159,20 @@
   },
   "bibliographie": {
     "tome1": {
-      "name": "Nicolas de Staël catalogue raisonné de l'œuvre peint",
+      "name": "Nicolas de Staël catalogue raisonné de l’œuvre peint",
       "author": "François de Staël",
       "editor": "Ides et Calendes",
       "w": "114",
       "h": "161",
       "characteristics": {
         "type": "Album",
-        "pages": "1280",
+        "pages": "1264",
         "format": "24 x 30",
         "content": "Illustrations",
         "cover": "Relié, couverture illustrée"
       },
-      "info": "Dans cet ouvrage, vous trouverez l'intégralité de l'œuvre peint de Nicolas de Staël dans un ouvrage très richement illustré, réalisé par Françoise de Staël."
+      "info": "Dans cet ouvrage, vous trouverez l’intégralité de l’œuvre peint de Nicolas de Staël dans un ouvrage très richement illustré, réalisé par Françoise de Staël.",
+      "amazon": "https://www.amazon.fr/Nicolas-Sta%C3%ABl-Catalogue-raisonn%C3%A9-loeuvre/dp/2825800546/"
     },
     "tome2": {
       "name": "La mesure de Nicolas de Staël",
@@ -186,7 +187,8 @@
         "content": "127 illustrations",
         "cover": "Relié, couverture illustrée"
       },
-      "info": ""
+      "info": "C’est un livre ambitieux, précis, enthousiaste que Jean-Pierre Jouffroy consacrait à Nicolas de Staël en 1981.",
+      "amazon": "https://www.amazon.fr/Mesure-Nicolas-Sta%C3%ABl-Jean-Pierre-Jouffroy/dp/2825800015"
     },
     "tome3": {
       "name": "Le prince foudroyé la vie de nicolas de staël",
@@ -201,22 +203,24 @@
         "content": "Illustrations",
         "cover": "Broché, couverture illustrée"
       },
-      "info": ""
+      "info": "Laurent Greilsamer nous trace la vie de Nicolas de Staël avec beaucoup de retenue sans occulter toutes les facettes de la personnalité de ce peintre à part.",
+      "amazon": "https://www.amazon.fr/Prince-foudroyé-Vie-Nicolas-Stael/dp/2213595526"
     },
     "tome4": {
-      "name": "Nicolas de Stael, L'aventure en peinture",
-      "author": "Arno Mansar",
-      "editor": "La renaissance du livre",
-      "w": "108",
-      "h": "178",
+      "name": "Nicolas de Staël, Lumières du Nord / Lumières du Sud",
+      "author": " Jean-Louis Andral",
+      "editor": "Gallimard ",
+      "w": "156",
+      "h": "180",
       "characteristics": {
-        "type": "Document",
-        "pages": "236",
-        "format": "18 x 24",
+        "type": "Livres d’Art",
+        "pages": "224",
+        "format": "22 x 26",
         "content": "Illustrations",
         "cover": "Broché, couverture illustrée"
       },
-      "info": ""
+      "info": "Ouvrage publié à l’occasion de l’exposition présentée au MuMa - musée d’art moderne André Malraux, au Havre, du 7 juin au 9 novembre 2014.",
+      "amazon": "https://www.amazon.fr/Nicolas-Sta%C3%ABl-Lumi%C3%A8res-Nord-Sud/dp/2070145077"
     },
     "tome5": {
       "name": "Nicolas de Staël",
@@ -231,7 +235,8 @@
         "content": "Illustrations",
         "cover": "Relié, couverture illustrée"
       },
-      "info": ""
+      "info": "Un livre idéal pour ceux qui veulent savoir plus sur un grand peintre et sa lutte. Très beau style",
+      "amazon": "https://www.amazon.fr/NICOLAS-STAEL-BROCHE-Nicolas-Sta%C3%ABl/dp/2884430334"
     }
   }
 }
