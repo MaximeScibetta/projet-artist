@@ -9,4 +9,10 @@
   & time{
     font-style: italic;
   }
+
+  & p:nth-of-type(1n+3){
+    width: 73%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
