@@ -2,37 +2,39 @@
 @import "settings/core";
 
 
-@import "tools/_mixins";
+@import "tools/mixins";
 
 
 @import "generic/reset";
 @import "generic/box-sizing";
 @import "generic/visually-hidden";
+@import "generic/_wrap";
+@import "generic/_required";
+@import "generic/_info-for-required";
+@import "generic/_site__heading";
+@import "generic/_page-heading";
+@import "generic/_cta";
+@import "generic/_field-container";
+@import "generic/_input-alert";
+@import "generic/_amazon-ico";
 
 
 @import "base/page";
 @import "base/headings";
 @import "base/header";
 @import "base/main";
-@import "base/cta";
 @import "base/paragraph";
 @import "base/links";
 @import "base/ul__ul";
 @import "base/footer";
 
 
-@import "components/site__heading";
-
-@import "components/wrap";
-
-@import "components/amazon-ico";
 
 @import "components/main-nav";
 @import "components/main-nav__list__item";
 @import "components/main-nav__link";
 @import "components/main-nav__link--active";
 
-@import "components/page-heading";
 
 @import "components/biographie__teasing";
 @import "components/biographie__container";
@@ -72,11 +74,11 @@
 @import "components/pratique__catalog-form-section__form";
 @import "components/pratique__catalog-form-section__form__part";
 @import "components/pratique__catalog-form-section__input";
+@import "components/pratique__catalog-form-section__label";
 @import "components/pratique__catalog-form-section__submit";
-@import "components/pratique__catalog-form-section__alert";
-@import "components/pratique__cta-to-liens";
+@import "components/pratique__cta-to-bibliographie";
 
-@import "components/site-footer__link";
+@import "components/_site-footer__link";
 
 
 
