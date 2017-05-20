@@ -1,0 +1,18 @@
+.pratique__catalog-form-section__label{
+
+  &:before{
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    left: 13.7em;
+    top: 1.8em;
+    color: $sent-color;
+    display: none;
+  }
+
+  &--valid:before{
+    display: inline;
+  }
+
+}
+

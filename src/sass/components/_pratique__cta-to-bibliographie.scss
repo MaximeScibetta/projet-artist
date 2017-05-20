@@ -1,0 +1,8 @@
+.pratique__cta-to-bibliographie{
+  display: none;
+  margin-top: 6em;
+}
+
+.pratique__catalog-form-section__title--valid ~ .pratique__cta-to-bibliographie{
+  display: block;
+}

@@ -1,0 +1,9 @@
+.info-for-required{
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+
+  & :last-of-type{
+    font-size: 0.707em;
+  }
+}

@@ -95,62 +95,77 @@ const fZoomImage = function () {
  - retour : /
  */
 const fCheckForm = function () {
-    const $Inputs = document.querySelectorAll('.pratique__catalog-form-section__input');
-    const $FormAlert = document.querySelector('.pratique__catalog-form-section__alert');
-    const $FormSection = document.querySelector('.pratique__catalog-form-section');
     const $Form = document.querySelector('.pratique__catalog-form-section__form');
     const $FormSectionTitle = document.querySelector('.pratique__catalog-form-section__title');
 
+    const $FirstNamefield = document.getElementsByName('firstname')[0];
+    const $LastNamefield = document.getElementsByName('lastname')[0];
+    const $PostCodefield = document.getElementsByName('post_code')[0];
+    const $Addressfield = document.getElementsByName('address')[0];
+    const $Cityfield = document.getElementsByName('city')[0];
+    const $Emailfield = document.getElementsByName('email')[0];
 
-    const fCheckAllInputs = function () {
-        let i = 0, nbError = 0;
-        while ($Inputs[i]){
-            if ($Inputs[i].classList.contains('pratique__catalog-form-section__input--invalid')){
-                nbError += 1;
-            }
-            i++
-        }
-        if (nbError){
-            $FormAlert.classList.add('pratique__catalog-form-section__alert--invalid');
+    let regexpName = /^[a-zA-Z\u00C0-\u00FF]+['-]?[a-zA-Z\u00C0-\u00FF]+$/;
+    let regexpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let regexpPostCode = /^[1-9][0-9][0-9][0-9]$/;
+
+    const fCheckAField = function (field, regexp) {
+        if(field.value == ''){
+            field.classList.add('pratique__catalog-form-section__input--empty');
+            field.parentNode.querySelector('label').classList.remove('pratique__catalog-form-section__label--valid');
+            field.classList.remove('pratique__catalog-form-section__input--bad-char');
+            field.setAttribute('aria-invalid', 'true');
             return false;
-        }else {
-            $FormAlert.classList.remove('pratique__catalog-form-section__alert--invalid');
+        }else if(regexp && !regexp.test(field.value)){
+            field.classList.remove('pratique__catalog-form-section__input--empty');
+            field.parentNode.querySelector('label').classList.remove('pratique__catalog-form-section__label--valid');
+            field.classList.add('pratique__catalog-form-section__input--bad-char');
+            field.setAttribute('aria-invalid', 'true');
+            return false;
+        }else{
+            field.classList.remove('pratique__catalog-form-section__input--empty');
+            field.parentNode.querySelector('label').classList.add('pratique__catalog-form-section__label--valid');
+            field.classList.remove('pratique__catalog-form-section__input--bad-char');
+            field.setAttribute('aria-invalid', 'false');
             return true;
         }
     };
 
+    const fCheckFirstName = function () {
+        return fCheckAField($FirstNamefield, regexpName);
+    };
+    const fCheckLastName = function () {
+        return fCheckAField($LastNamefield, regexpName);
+    };
+    const fCheckPostCode = function () {
+        return fCheckAField($PostCodefield, regexpPostCode);
+    };
+    const fCheckAddress = function () {
+        return fCheckAField($Addressfield, false);
+    };
+    const fCheckCity = function () {
+        console.log('5');
+        return fCheckAField($Cityfield, false);
+    };
+    const fCheckEmail = function () {
+        return fCheckAField($Emailfield, regexpEmail);
+    };
+
     const fSubmit = function (e) {
-        let i = 0;
-        while ($Inputs[i]){
-            if ($Inputs[i].value == ''){
-                $Inputs[i].classList.add('pratique__catalog-form-section__input--invalid');
-            }
-            i++
-        }
-        if (!fCheckAllInputs()){
-            e.preventDefault();
-        }else{
-            $FormSection.classList.add('pratique__catalog-form-section--valid');
+        e.preventDefault();
+        if(fCheckFirstName() * fCheckLastName() * fCheckPostCode() * fCheckAddress() * fCheckCity() * fCheckEmail()){
             $FormSectionTitle.innerText = 'Formulaire bien envoyé';
-            e.preventDefault();
+            $Form.classList.add('pratique__catalog-form-section__form--valid');
+            $FormSectionTitle.classList.add('pratique__catalog-form-section__title--valid');
         }
     };
 
-    const fCheckInput = function (e) {
+    $FirstNamefield.addEventListener('blur', fCheckFirstName, false);
+    $LastNamefield.addEventListener('blur', fCheckLastName, false);
+    $PostCodefield.addEventListener('blur', fCheckPostCode, false);
+    $Addressfield.addEventListener('blur', fCheckAddress, false);
+    $Emailfield.addEventListener('blur', fCheckEmail, false);
 
-        if (e.currentTarget.value == '' ){
-            e.currentTarget.classList.add('pratique__catalog-form-section__input--invalid');
-        }else {
-            e.currentTarget.classList.remove('pratique__catalog-form-section__input--invalid');
-        }
-        fCheckAllInputs();
-    };
-
-    let i = 0;
-    while ($Inputs[i]){
-        $Inputs[i].addEventListener('blur', fCheckInput, false);
-        i++
-    }
     $Form.addEventListener('submit', fSubmit, false);
 };
 
