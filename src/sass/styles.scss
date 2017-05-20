@@ -8,15 +8,16 @@
 @import "generic/reset";
 @import "generic/box-sizing";
 @import "generic/visually-hidden";
-@import "generic/_wrap";
-@import "generic/_required";
-@import "generic/_info-for-required";
-@import "generic/_site__heading";
-@import "generic/_page-heading";
-@import "generic/_cta";
-@import "generic/_field-container";
-@import "generic/_input-alert";
-@import "generic/_amazon-ico";
+@import "generic/wrap";
+@import "generic/required";
+@import "generic/info-for-required";
+@import "generic/site__heading";
+@import "generic/page-heading";
+@import "generic/cta";
+@import "generic/field-container";
+@import "generic/input-alert";
+@import "generic/amazon-ico";
+@import "generic/modal";
 
 
 @import "base/page";
@@ -27,7 +28,6 @@
 @import "base/links";
 @import "base/ul__ul";
 @import "base/footer";
-
 
 
 @import "components/main-nav";
@@ -44,6 +44,8 @@
 @import "components/biographie__image_caption";
 @import "components/biographie__text";
 @import "components/biographie__text__quote";
+@import "components/biographie__text__title";
+@import "components/biographie__cta-to-pratique";
 
 @import "components/galerie";
 @import "components/galerie__figure-container";
