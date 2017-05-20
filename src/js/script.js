@@ -9,25 +9,64 @@ const fZoomImage = function () {
     const $GalerieImageLink = document.querySelectorAll('.galerie__image-link'); // tableau de chaque <a> de la galerie se trouvant dans une figure.
     const $GalerieFigure = document.querySelectorAll('.galerie__figure'); // tableau de chaque <a> de la galerie se trouvant dans une figure.
 
-    const fImageClicked = function(e) {
-        document.addEventListener('keyup', fEscapePressed, false);
-        document.addEventListener('mousewheel', fDisableScroll, false);
-        document.addEventListener('keydown', fDisableScroll, false);
-        e.currentTarget.nextSibling.classList.add('galerie__figure--on-click');
-        e.currentTarget.nextSibling.querySelector('.galerie__close-button').classList.add('galerie__close-button--visible');
-        let j = 0;
-        while ($GalerieImageLink[j]){
-            $GalerieImageLink[j].classList.add('galerie__image-link--disable');
-            j++;
+    // left: 37, up: 38, right: 39, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    const keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+    const preventDefault = function (e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    };
+
+    const preventDefaultForScrollKeys = function (e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
         }
-        e.stopPropagation();
-        document.querySelector('body').addEventListener('click', fOutOfBox, false);
+    }
+
+
+    const disableScroll = function () {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        window.ontouchmove  = preventDefault; // mobile
+        document.onkeydown  = preventDefaultForScrollKeys;
+    };
+
+    const enableScroll = function () {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    };
+
+    const fEscapePressed = function (e) {
+        if (e.keyCode === 27){
+            let i = 0;
+            while ($GalerieImageLink[i]){
+                $GalerieImageLink[i].parentNode.querySelector('.galerie__figure').classList.remove('galerie__figure--on-click');
+                $GalerieImageLink[i].nextSibling.classList.remove('modal--on-click');
+                $GalerieImageLink[i].parentNode.querySelector('.galerie__close-button').classList.remove('galerie__close-button--visible');
+                $GalerieImageLink[i].classList.remove('galerie__image-link--disable');
+                i++;
+            }
+            enableScroll();
+            document.removeEventListener('keyup', fEscapePressed, false);
+            document.querySelector('body').addEventListener('click', fOutOfBox, false);
+
+        }
     };
 
     const fImageCloseButtonClicked = function(e) {
-        document.removeEventListener('mousewheel', fDisableScroll, false);
-        document.removeEventListener('keydown', fDisableScroll, false);
+        enableScroll();
         e.currentTarget.parentNode.classList.remove('galerie__figure--on-click');
+        e.currentTarget.parentNode.parentNode.classList.remove('modal--on-click');
         e.currentTarget.classList.remove('galerie__close-button--visible');
         let j = 0;
         while ($GalerieImageLink[j]){
@@ -36,43 +75,33 @@ const fZoomImage = function () {
         }
         document.querySelector('body').addEventListener('click', fOutOfBox, false);
     };
-
-    const fEscapePressed = function (e) {
-        if (e.keyCode === 27){
-            let i = 0;
-            while ($GalerieImageLink[i]){
-                $GalerieImageLink[i].nextSibling.classList.remove('galerie__figure--on-click');
-                $GalerieImageLink[i].nextSibling.querySelector('.galerie__close-button').classList.remove('galerie__close-button--visible');
-                $GalerieImageLink[i].classList.remove('galerie__image-link--disable');
-                i++;
-            }
-            document.removeEventListener('mousewheel', fDisableScroll, false);
-            document.removeEventListener('keydown', fDisableScroll, false);
-            document.removeEventListener('keyup', fEscapePressed, false);
-            document.querySelector('body').addEventListener('click', fOutOfBox, false);
-        }
-    };
-
-    const fDisableScroll = function (e){
-
-        if (e.keyCode) {
-            /^(32|33|34|35|36|38|40)$/.test(e.keyCode) && e.preventDefault();
-        }else {
-            e.preventDefault();
-        }
-    };
     
     const fOutOfBox = function (e) {
         let i = 0;
         while ($GalerieImageLink[i]){
-            $GalerieImageLink[i].nextSibling.classList.remove('galerie__figure--on-click');
+            $GalerieImageLink[i].parentNode.querySelector('.galerie__figure').classList.remove('galerie__figure--on-click');
+            $GalerieImageLink[i].nextSibling.classList.remove('modal--on-click');
             $GalerieImageLink[i].nextSibling.querySelector('.galerie__close-button').classList.remove('galerie__close-button--visible');
             $GalerieImageLink[i].classList.remove('galerie__image-link--disable');
             i++;
         }
         document.querySelector('body').removeEventListener('click', fOutOfBox, false);
-        document.removeEventListener('mousewheel', fDisableScroll, false);
-        document.removeEventListener('keydown', fDisableScroll, false);
+        enableScroll();
+    };
+
+    const fImageClicked = function(e) {
+        document.addEventListener('keyup', fEscapePressed, false);
+        disableScroll();
+        e.currentTarget.nextSibling.querySelector('.galerie__figure').classList.add('galerie__figure--on-click');
+        e.currentTarget.nextSibling.classList.add('modal--on-click');
+        e.currentTarget.nextSibling.querySelector('.galerie__close-button').classList.add('galerie__close-button--visible');
+        let j = 0;
+        while ($GalerieImageLink[j]){
+            $GalerieImageLink[j].classList.add('galerie__image-link--disable');
+            j++;
+        }
+        e.stopPropagation();
+        document.querySelector('body').addEventListener('click', fOutOfBox, false);
     };
 
     const fStopEventPropa = function (e) {
@@ -90,7 +119,7 @@ const fZoomImage = function () {
 };
 
 
-/*  La fonction fCheckForm parcours chaque input du formulair et à la perte de focus, il verifie si un contenu est présent, si vide il ajoute les class permettant d'afficher un message d'erreur.
+/*  La fonction fCheckForm vérifie les champs à la perte de focus et à la validation du formulaire
  - paramètres : /
  - retour : /
  */
@@ -164,6 +193,7 @@ const fCheckForm = function () {
     $LastNamefield.addEventListener('blur', fCheckLastName, false);
     $PostCodefield.addEventListener('blur', fCheckPostCode, false);
     $Addressfield.addEventListener('blur', fCheckAddress, false);
+    $Cityfield.addEventListener('blur', fCheckCity, false);
     $Emailfield.addEventListener('blur', fCheckEmail, false);
 
     $Form.addEventListener('submit', fSubmit, false);
