@@ -1,7 +1,3 @@
-.galerie__figure{
-
-}
-
 //javascript enable
 
 .js-enable .galerie__figure{
@@ -9,17 +5,17 @@
   width: 113px;
   height: 113px;
   overflow: hidden;
-  border-radius: 50%;
 
   &--on-click{
     border-radius: initial;
     padding: 2.5em 1em 2.5em;
     width: 27em;
     height: auto;
-    margin: -15.9em 0 0 -13.5em;
+    margin: -15.9em auto;
     box-shadow: 0 0 3px $dark-gray ;
     position: fixed;
-    left: 49.6vw;
+    left: 0;
+    right: 0;
     top: 50vh;
     z-index: 1;
   }
