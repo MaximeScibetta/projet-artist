@@ -51,37 +51,37 @@ block content
             div(class=pageNameClass + '__catalog-form-section__form__part')
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="lastname-input")!= 'Nom'
-                        span.required *
+                        span.required= ' *'
                     input(class=pageNameClass + '__catalog-form-section__input', type="text", name="lastname", placeholder="Snow", id="lastname-input", aria-required="true", aria-invalid="false")
                     span.empty-alert.input-alert(role="alert") Champs requis
                     span.bad-char-alert.input-alert(role="alert") Nom incorrect
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="firstname-input")!= 'Prénom'
-                        span.required *
+                        span.required= ' *'
                     input(class=pageNameClass + '__catalog-form-section__input', type="text", name="firstname", placeholder="Jon", id="firstname-input", aria-required="true", aria-invalid="false")
                     span.empty-alert.input-alert(role="alert") Champs requis
                     span.bad-char-alert.input-alert(role="alert") Prénom incorrect
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="address-input")!= 'Adresse'
-                        span.required *
+                        span.required= ' *'
                     input(class=pageNameClass + '__catalog-form-section__input', type="text", name="address", placeholder="Rue Bidule 125", id="address-input", aria-required="true", aria-invalid="false")
                     span.empty-alert.input-alert(role="alert") Champs requis
             div(class=pageNameClass + '__catalog-form-section__form__part')
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="post-code-input")!= 'Code postal'
-                        span.required *
+                        span.required= ' *'
                     input(class=pageNameClass + '__catalog-form-section__input', type="text", name="post_code", placeholder="1000", id="post-code-input", aria-required="true", aria-invalid="false")
                     span.empty-alert.input-alert(role="alert") Champs requis
                     span.bad-char-alert.input-alert(role="alert") Code postal incorrect
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="city-input")!= 'Ville'
-                        span.required *
+                        span.required= ' *'
                     select(class=pageNameClass + '__catalog-form-section__input', name="city", id="city-input", aria-required="true", aria-invalid="false")
                         each val in zipCode
                             option(value=val.city)= val.city
                 div.field-container
                     label(class=pageNameClass + '__catalog-form-section__label', for="email-input")!= 'Email'
-                        span.required *
+                        span.required= ' *'
                     input(class=pageNameClass + '__catalog-form-section__input', type="text", name="email", placeholder="jon.snow@exemple.com", id="email-input", aria-required="true", aria-invalid="false")
                     span.empty-alert.input-alert(role="alert") Champs requis
                     span.bad-char-alert.input-alert(role="alert") Email incorrecte
