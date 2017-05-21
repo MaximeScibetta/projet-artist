@@ -7,13 +7,19 @@ block page-name
 
 block content
     blockquote(class=pageNameClass + '__teasing', cite="http://art-deco.france.pagesperso-orange.fr/stael.htm") «&nbsp;Un des artistes européens les plus influents de la période d&rsquo;après-guerre&nbsp;»
-    div(class=pageNameClass + '__container')
+    div(class=pageNameClass + '__container', itemscope, itemtype="http://schema.org/Person")
         figure(class=pageNameClass + '__figure')
             img(src="assets/images/nicolas.jpg", width="300", height="258", alt="Photo portait de Nicolas de Staël", class=pageNameClass + '__image')
             figcaption(class=pageNameClass + '__image__caption') Nicolas de Staël dans son atelier, rue Gauguet, Paris 1949
 
-        div(class=pageNameClass + '__text')
-            p Nicolas de Staël (Saint-Petersbourg, #[time(datetime="1914") 1914] - Antibes, #[time(datetime="1955") 1955]) n&rsquo;a gardé de son ascendance balte qu&rsquo;un fond de romantisme et le sentiment d&rsquo;un vertige désespéré, longtemps dominés par l&rsquo;éducation reçue en Europe. Cet &oelig;uvre se déroule sur dix ans, dans une violence de création et une lucidité rares.
+        div(class=pageNameClass + '__text vcard')
+            p
+                span(class="n")
+                    span(itemprop="givenName", class="given-name") Nicolas
+                    span(itemprop="familyName", class="family-name")= 'de Staël '
+                |(
+                span(itemprop="birthPlace") Saint-Petersbourg
+                |, #[time(datetime="1914", itemprop="birthDate", class="bday") 1914] - Antibes, #[time(datetime="1955", itemprop="deathDate") 1955]) n&rsquo;a gardé de son ascendance balte qu&rsquo;un fond de romantisme et le sentiment d&rsquo;un vertige désespéré, longtemps dominés par l&rsquo;éducation reçue en Europe. Cet &oelig;uvre se déroule sur dix ans, dans une violence de création et une lucidité rares.
             p Il entreprend un retournement de sa vision entre #[time(datetime="1951") 1951] et #[time(datetime="1952") 1952], passant d&rsquo;une nonfiguration dont il est, malgré lui, l&rsquo;un des champions à une approche de la réalité résolument neuve. La très forte personnalité du peintre alliée à une intelligence aiguë de la peinture et une fine perception de l&rsquo;espace-lumière engendrent quelques centaines d&rsquo;&oelig;uvres-clé de l&rsquo;histoire de l&rsquo;art contemporain.
             blockquote(class=pageNameClass + '__text__quote', cite="https://fr.wikipedia.org/wiki/Nicolas_de_Staël") Des expositions dont nous mesurons chaque jour davantage la vérité ou la vertu novatrice ont fait connaître ses travaux à travers le monde.
             h2(class=pageNameClass + '__text__title') Le Catalogue
@@ -21,6 +27,9 @@ block content
                 a(class=pageNameClass + '__cta-to-pratique', href='pratique.html',  title='Aller vers la page permettant de commander le catalogue') Demander votre catalogue
             h2(class=pageNameClass + '__text__title') Sa technique
             p Sa technique évolue de l&rsquo;épaisseur des empâtements au couteau à une matière diaphane sans perdre ni sa richesse ni la justesse de ses rapports colorés. Quelques soient les formats le lyrisme se maintient à un diapason élevé, comme si le destin imposait à l&rsquo;artiste une trajectoire constamment tendue à l&rsquo;extrême pour engendrer un rapport renouvelé avec le réel.
-
+            span(hidden, itemprop="jobTitle", aria-hidden="true", class="category") Artiste peintre
+            span(hidden, itemprop="gender", content="m", aria-hidden="true")
+            span(hidden, itemprop="nationality", aria-hidden="true", class="adr")
+                span(hidden,aria-hidden="true", class="country-name") Russie
 block endContent
     a(class=pageNameClass + '__cta-to-galerie cta', href='galerie.html',  title='Aller vers la page galerie') Parcourir sa galerie
