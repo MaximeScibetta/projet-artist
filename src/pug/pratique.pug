@@ -7,19 +7,21 @@ block page-name
 
 block content
     ul(class=pageNameClass + '__infos-list vevent', itemscope, itemtype="http://schema.org/VisualArtsEvent", id="hcalendar-event-title")
-        li(hidden, class="summary", itemprop="name") Exposition Nicolas de Staël
+        li(hidden, class="summary", itemprop="name", aria-hidden="true") Exposition Nicolas de Staël
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--address location', itemprop="location", itemscope, itemtype="http://schema.org/Place")
             span.ico.fa.fa-map-marker
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Lieu&nbsp;: '
             span(itemprop="name"): span(itemprop="address", itemscope, itemtype="http://schema.org/PostalAddress")
                 span(itemprop="streetAddress")= 'Palais des Beaux-Arts '
-                meta(itemprop="addressLocality", content="Houtesiplou")
+                span(hidden, itemprop="addressLocality", content="Houtesiplou", aria-hidden="true")
             span de Houtesiplou
-            meta(itemprop="telephone", content="+32470676767")
+            span(hidden, itemprop="telephone", content="+32470676767", aria-hidden="true")
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--date', itemprop="startDate", content="2017-11-20T10:00")
             span.ico.fa.fa-calendar
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Dates&nbsp;: '
             span Du #[span(class="dtstart visually-hidden") 2017-11-20T10:00+01:00]#[time(datetime="2017-11-20T10:00+01:00") 20 novembre 2017] au #[span(class="dtend visually-hidden") 2018-03-18T18:00:00+01:00]#[time(datetime="2018-03-18T18:00:00+01:00", itemprop="endDate", content="2018-03-18T18:00") 18 mars 2018]
+            span(hidden, class="description", aria-hidden="true") Prochaine exposition de Nicolas de Staël.
+            span(hidden, class="url", aria-hidden="true") http://nicolas-de-stael.com
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass + '__infos-list__item--schedule')
             span.ico.fa.fa-clock-o
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Horaire&nbsp;: '
@@ -29,16 +31,25 @@ block content
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Tarifs&nbsp;: '
             span(class=pageNameClass + '__infos-list__sub-part') Adultes 4 €
             span(class=pageNameClass + '__infos-list__sub-part') Enfants 2 €
-            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
-                span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service")
-                    span(hidden, itemprop="category") Adult entrance
-                span(hidden, itemprop="priceCurrency", content="EUR")
-                span(hidden, itemprop="price", content="4")
-            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer")
-                span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service")
-                    span(hidden, itemprop="category") Children entrance
-                span(hidden, itemprop="priceCurrency", content="EUR")
-                span(hidden, itemprop="price", content="2")
+            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer", aria-hidden="true")
+                span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service", aria-hidden="true")
+                span(hidden, itemprop="category") Adult entrance
+                span(hidden, itemprop="priceCurrency", content="EUR", aria-hidden="true")
+                span(hidden, itemprop="price", content="4", aria-hidden="true")
+                span(hidden, itemprop="availability", content="In stock", aria-hidden="true")
+                span(hidden, itemprop="url", content="http://nicolas-de-stael.com", aria-hidden="true")
+                span(hidden, itemprop="validFrom", content="2017-11-20", aria-hidden="true")
+            span(hidden, itemprop="offers", itemscope, itemtype="http://schema.org/Offer", aria-hidden="true")
+                span(hidden, itemprop="itemOffered", itemscope, itemtype="http://schema.org/Service", aria-hidden="true")
+                span(hidden, itemprop="category", aria-hidden="true") Children entrance
+                span(hidden, itemprop="priceCurrency", content="EUR", aria-hidden="true")
+                span(hidden, itemprop="price", content="2", aria-hidden="true")
+                span(hidden, itemprop="availability", content="In stock", aria-hidden="true")
+                span(hidden, itemprop="url", content="http://nicolas-de-stael.com", aria-hidden="true")
+                span(hidden, itemprop="validFrom", content="2017-11-20", aria-hidden="true")
+            span(hidden, itemprop="description", content="Prochaine exposition de Nicolas de Staël.", aria-hidden="true")
+            span(hidden, itemprop="image", content="http://jeannebucherjaeger.com/wp-content/uploads/2015/09/Portrait_Nicolas-de-Stael-320x320.jpg", aria-hidden="true")
+            span(hidden, itemprop="performer", content="Nicolas de Staël", aria-hidden="true")
         li(class=pageNameClass + '__infos-list__item' + ' ' + pageNameClass +'__infos-list__item--phone')
             span.ico.fa.fa-phone
             span(class=pageNameClass + '__infos-list__sub-part')!= 'Téléphone&nbsp;: '
