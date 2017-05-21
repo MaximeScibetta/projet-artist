@@ -1,3 +1,17 @@
 .liens__links-list__item{
-  padding: 10px;
+  padding: 0 .6em 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $light-gray;
+  position: relative;
+
+  &:before{
+    font-family: FontAwesome;
+    font-size: .8em;
+    color: $red;
+    content: '\f10c';
+    position: absolute;
+    left: -1em;
+    top: .7em;
+
+  }
 }
