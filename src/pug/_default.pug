@@ -20,7 +20,8 @@ html(lang="fr")
 
     body
         header.wrap(role="banner")
-            h1(role="heading", aria-level="1", class="site__heading"): span= projectName
+            h1(role="heading", aria-level="1", class="site__heading")
+                a(href="index.html", title="Accueil - Nicolas de Staël", class="site__heading_link")= projectName
             nav(aria-labelledby="mainMenuHeading", role="navigation", class="main-nav")
                 h2.visually-hidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
                 ul.main-nav__list
@@ -45,7 +46,7 @@ html(lang="fr")
                 block content
             div(class="end-content")
                 block endContent
-
+            a(href="#", title="Vers le haut de la page", class="to-the-top-link") Remonter
 
         footer.site-footer(role="contentinfo")
             ul
