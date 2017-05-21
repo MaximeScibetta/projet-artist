@@ -18,6 +18,7 @@
 @import "generic/input-alert";
 @import "generic/amazon-ico";
 @import "generic/modal";
+@import "generic/to-the-top-link";
 
 
 @import "base/page";
@@ -29,6 +30,8 @@
 @import "base/ul__ul";
 @import "base/footer";
 
+
+@import "components/site__heading_link";
 
 @import "components/main-nav";
 @import "components/main-nav__list__item";
@@ -67,6 +70,7 @@
 @import "components/liens__links-list";
 @import "components/liens__links-list__item";
 @import "components/liens__links-list__link";
+@import "components/liens__links-list__link-description";
 
 @import "components/pratique__infos-list";
 @import "components/pratique__infos-list__item";
