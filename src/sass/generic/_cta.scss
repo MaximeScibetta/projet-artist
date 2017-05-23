@@ -1,6 +1,7 @@
 .cta{
   display: block;
-  width: 25em;
+  max-width: 25em;
+  width: 78%;
   padding: 1em;
   border: 3px $link-txt-color double;
   border-radius: 5px;
@@ -23,6 +24,7 @@
     right: .6em;
     transition: .5s;
     padding-left: 1em;
+    font-weight: 400;
 
   }
 
@@ -34,6 +36,15 @@
     &:after{
       top: .19em;
       right: .6em;
+    }
+  }
+
+  @media (max-width: 350px){
+    padding-left: 0;
+    padding-right: 0;
+    text-transform: none;
+    &:after{
+      content: initial;
     }
   }
 }
