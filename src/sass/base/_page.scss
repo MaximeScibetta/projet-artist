@@ -1,5 +1,9 @@
 html{
   background-color: $bcg-color;
+
+  @media (max-width: 390px){
+    background: initial;
+  }
 }
 
 body{
@@ -12,4 +16,8 @@ body{
   display: flex;
   flex-direction: column;
   background: url(../images/main_bcg.png) center center fixed;
+
+  @media (max-width: 390px){
+    background: initial;
+  }
 }
