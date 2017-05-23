@@ -1,5 +1,11 @@
 .galerie__image{
   margin-bottom: .5em;
+
+  @media (max-width: 415px) {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 //javascript enable

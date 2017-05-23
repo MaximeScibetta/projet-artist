@@ -2,13 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  width: 53.033334em;
+  max-width: 795.5px;
+  width: 100%;
   margin: 0 auto;
+  justify-content: space-around;
 }
 
 //javascript enable
 
 .js-enable .galerie{
-  width: 63.5%;
+  width: 100%;
+  max-width: 685.81px;
   margin: 0 auto;
 }
