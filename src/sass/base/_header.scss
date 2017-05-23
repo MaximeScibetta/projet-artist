@@ -1,6 +1,17 @@
 header{
   height: 196px;
-  //margin-top: 20px;
   background: url("../images/header-bcg.jpg") no-repeat;
   position: relative;
+
+  @media (max-width: 1010px){
+    background: url("../images/header-bcg-1010.jpg") no-repeat;
+  }
+
+  @media (max-width: 850px){
+    background: url("../images/header-bcg-850.jpg") no-repeat;
+  }
+
+  @media (max-width: 540px){
+    background: url("../images/header-bcg-525.jpg") no-repeat;
+  }
 }

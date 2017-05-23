@@ -2,8 +2,58 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  left: 738px;
+  right: 5%;
   top: -5px;
   font-size: 2.413270972em;
   color: $dark-gray;
+
+  @media (max-width: 1120px){
+    right: 3%;
+  }
+  @media (max-width: 1060px){
+    right: 1%;
+  }
+  @media (max-width: 1010px){
+    width: 8em;
+    top: -0.2em;
+    color: #ffffff;
+    text-shadow: 0 0 5px $dark-gray;
+    font-size: 3.997584364816em;
+  }
+
+  @media (max-width: 850px){
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+  }
+
+  @media (max-width: 720px){
+    font-size: 2.413270972em;
+  }
+
+  @media (max-width: 540px){
+    top: 1.3em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.2em 0.6em;
+    width: 9.5em;
+    text-shadow: initial;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #ffffff;
+  }
+
+  @media (max-width: 370px){
+    top: 1.5em;
+    width: 9em;
+    font-size: 1.999396em;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+
+  @media (max-width: 290px){
+    width: 5em;
+    top: .8em;
+  }
 }
