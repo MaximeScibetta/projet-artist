@@ -1,5 +1,5 @@
 .page-heading{
-  font-size: 1.999em;
+  font-size: 1.999396em;
   font-family: $heading-font;
   margin-bottom: 40px;
   padding-bottom: 20px;
@@ -9,4 +9,21 @@
   width: 66%;
   font-weight: bold;
   letter-spacing: 0.2em;
+
+  @media (max-width: 760px){
+    width: 80%;
+  }
+
+  @media (max-width: 630px){
+    width: 90%;
+  }
+
+  @media (max-width: 565px){
+    width: 100%;
+  }
+
+  @media (max-width: 350px){
+    width: 100%;
+    font-size: 1.414em;
+  }
 }
