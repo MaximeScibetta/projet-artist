@@ -1,0 +1,26 @@
+.main-nav__list{
+
+  @media (max-width: 470px){
+    position: absolute;
+    left: -14em; //1
+    top: -11.06em;
+    z-index: 1;
+    background-color: rgba(255,255,255,1);
+    color: #000000;
+    width: 15em;
+    height: 17.5em;
+    padding-top: 1.5em;
+    transition: left .7s;
+  }
+}
+
+//checked
+
+.burger-menu-input:checked{
+
+  & ~ .main-nav__list{
+    background-color: rgba(0,0,0,.95);
+    color: #ffffff;
+    left: 1em;
+  }
+}

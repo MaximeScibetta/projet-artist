@@ -1,6 +1,20 @@
 .main-nav__link--active{
   border-bottom: 3px double $menu-active-bar-bcg-color;
+
+  @media (max-width: 470px){
+    border-bottom: none;
+
+    &:after{
+      font-family: FontAwesome;
+      content: ' \f060';
+      margin-left: .3em;
+    }
+  }
 }
 .main-nav__link--active:hover{
   border-bottom: 3px double $link-hover-txt-color;
+
+  @media (max-width: 470px){
+    border-bottom: none;
+  }
 }

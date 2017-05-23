@@ -2,4 +2,11 @@
   position: absolute;
   bottom: 10px;
 
+  @media (max-width: 470px){
+    width: 15em;
+    height: 16.5em;
+    top: 11.09em;
+    left: -1.1em;
+    z-index: 1;
+  }
 }

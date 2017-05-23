@@ -2,4 +2,15 @@
   padding: 6px 0;
   position: relative;
   letter-spacing: 0.03em;
+
+  @media (max-width: 470px){
+    color: #ffffff;
+    font-size: 1.414em;
+  }
+
+  &:hover{
+    @media (max-width: 470px){
+      color: $red;
+    }
+  }
 }
