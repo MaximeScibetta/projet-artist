@@ -4,7 +4,17 @@
 
   background-color: $light-gray;
   border-radius: 10px;
-  width: 400px;
+  max-width: 26.7em;
+  width: 43%;
   padding: 20px 20px 15px;
   display: block;
+
+  @media (max-width: 570px){
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+    float: none;
+
+  }
 }

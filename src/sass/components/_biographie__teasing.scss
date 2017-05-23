@@ -1,7 +1,12 @@
 .biographie__teasing{
   font-size: 1.414em;
-  width: 37em;
+  max-width: 37em;
+  width: 100%;
   margin: -9px auto 1.5em;
   font-style: italic;
+  text-align: center;
 
+  @media(max-width: 470px){
+    font-size: 1em;
+  }
 }
