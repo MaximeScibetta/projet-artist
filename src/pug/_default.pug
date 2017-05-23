@@ -24,6 +24,11 @@ html(lang="fr")
                 a(href="index.html", title="Accueil - Nicolas de Staël", class="site__heading_link")= projectName
             nav(aria-labelledby="mainMenuHeading", role="navigation", class="main-nav")
                 h2.visually-hidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
+
+                input(type="checkbox" id="burger-menu" class="burger-menu-input")
+                label(class="burger-menu-label" for="burger-menu")
+                    span(class="fa fa-bars burger-menu-open" aria-hidden="true")
+                    span(class="fa fa-times burger-menu-close" aria-hidden="true")
                 ul.main-nav__list
                     each val in ['biographie', 'galerie', 'bibliographie', 'pratique', 'liens']
                         if (pageNameClass == val)
@@ -36,6 +41,7 @@ html(lang="fr")
                                 li.main-nav__list__item: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
                             else
                                 li.main-nav__list__item: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+
 
 
 
