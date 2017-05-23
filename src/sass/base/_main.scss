@@ -7,9 +7,11 @@ main{
   padding-right: 1.333333em;
   position: relative;
 
+
   &:before{
     content: '';
-    width: 1120px;
+    max-width: 1120px;
+    width: 58.8%;
     position: absolute;
     left: 0;
     top: -196px;
@@ -18,5 +20,18 @@ main{
     margin: 0 auto;
     box-shadow: 0 0 20px 0 rgba(75,75,75,.3);
     z-index: -1;
+
+    @media (max-width: 1120px){
+      content: initial;
+    }
   }
+
+  @media (max-width: 520px){
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 470px){
+    padding-top: 1.7em;
+  }
+
 }
