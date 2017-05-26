@@ -1,7 +1,8 @@
 .pratique__catalog-form-section__form__part{
-  display: inline-block;
 
-  &:first-of-type{
-    margin-right: 4em;
+  @media (max-width: 470px){
+    width: 100%;
+    max-width: 16em;
   }
+
 }

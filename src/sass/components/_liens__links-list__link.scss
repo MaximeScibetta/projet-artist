@@ -1,4 +1,9 @@
 .liens__links-list__link{
   padding: 10px 10px 10px 0;
   font-size: 1.414em;
+
+  @media (max-width: 550px){
+    font-size: 1em;
+    font-weight: 700;
+  }
 }

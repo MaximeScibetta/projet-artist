@@ -2,9 +2,11 @@
   position: relative;
   padding: 14px 18px;
   border-radius: 4px;
-  margin-top: 6px;
+  margin-top: 1.4em;
   border: 1px solid $light-gray;
-  display: inline-block;
+  display: block;
+  max-width: 14.3em;
+  width: 100%;
   color: #000000;
 
   &:hover{
@@ -12,8 +14,8 @@
     border-color: $amazon-orange;
   }
 
-
-  & img{
-    //vertical-align: -40%;
+  @media (max-width: 600px){
+    margin-left: auto;
+    margin-right: auto;
   }
 }

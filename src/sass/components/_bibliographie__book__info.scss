@@ -1,7 +1,7 @@
 .bibliographie__book__info{
   margin-top: -0.3em;
 
-  & li:not(last-of-type){
+  & li:not(:last-of-type){
     margin-bottom: .1em;
   }
 

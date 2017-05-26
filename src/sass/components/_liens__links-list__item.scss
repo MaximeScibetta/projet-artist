@@ -1,8 +1,13 @@
 .liens__links-list__item{
-  padding: 0 .6em 1em;
+  padding-left: .6em;
+  padding-right: .6em;
   margin-bottom: 1em;
-  border-bottom: 1px solid $light-gray;
   position: relative;
+
+  &:not(:last-of-type){
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 1em;
+  }
 
   &:before{
     font-family: FontAwesome;
@@ -13,5 +18,19 @@
     left: -1em;
     top: .7em;
 
+  }
+
+  @media (max-width: 550px){
+    &:before{
+      top: .2em;
+    }
+  }
+
+  @media (max-width: 300px){
+    padding-left: 0;
+
+    &:before{
+      display: none;
+    }
   }
 }

@@ -21,7 +21,7 @@ html(lang="fr")
     body
         header.wrap(role="banner")
             h1(role="heading", aria-level="1", class="site__heading")
-                a(href="index.html", title="Accueil - Nicolas de Staël", class="site__heading_link")= projectName
+                a(href="biographie", title="Accueil - Nicolas de Staël", class="site__heading_link")= projectName
             nav(aria-labelledby="mainMenuHeading", role="navigation", class="main-nav")
                 h2.visually-hidden(id="mainMenuHeading", role="heading", aria-level="2") Menu Principal
 
@@ -32,15 +32,9 @@ html(lang="fr")
                 ul.main-nav__list
                     each val in ['biographie', 'galerie', 'bibliographie', 'pratique', 'liens']
                         if (pageNameClass == val)
-                            if (val == 'biographie')
-                                li.main-nav__list__item: a.main-nav__link.main-nav__link--active(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
-                            else
-                                li.main-nav__list__item: a.main-nav__link.main-nav__link--active(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list__item: a.main-nav__link.main-nav__link--active(href=val, title='Aller vers la page ' + val)= firstLetterMaj(val)
                         else
-                            if (val == 'biographie')
-                                li.main-nav__list__item: a.main-nav__link(href='index.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
-                            else
-                                li.main-nav__list__item: a.main-nav__link(href=val + '.html', title='Aller vers la page ' + val)= firstLetterMaj(val)
+                            li.main-nav__list__item: a.main-nav__link(href=val, title='Aller vers la page ' + val)= firstLetterMaj(val)
 
 
 

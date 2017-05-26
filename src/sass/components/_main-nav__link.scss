@@ -8,7 +8,7 @@
     font-size: 1.414em;
   }
 
-  &:hover{
+  &:hover, &:focus{
     @media (max-width: 470px){
       color: $red;
     }

@@ -116,6 +116,13 @@ const fZoomImage = function () {
         i++
     }
 
+    window.addEventListener('resize', () => {
+        if(window.innerWidth < 415){
+            document.querySelector('html').classList.remove('js-enable');
+        }else{
+            document.querySelector('html').classList.add('js-enable');
+        }
+    });
 };
 
 
@@ -216,7 +223,7 @@ const fPageIsLoaded = function () {
         fCheckForm();
     }
 
-    if($pageTitle === 'Galerie - Nicolas de Staël'){
+    if( ($pageTitle === 'Galerie - Nicolas de Staël') && (window.innerWidth > 415) ){
         fZoomImage();
     }
 

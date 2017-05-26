@@ -15,5 +15,12 @@
     background-color: $link-hover-txt-color;
     cursor: pointer;
   }
+
+  @media (max-width: 470px){
+    //margin-left: 0;
+    width: 100%;
+    max-width: 18em;
+
+  }
 }
 
